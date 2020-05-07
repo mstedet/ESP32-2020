@@ -17,6 +17,7 @@ ESP32 programerings kursus 2020
 * [Home Automation With Home Assistant and ESPHome](https://www.youtube.com/watch?v=xDbH-xPQtXU)
 
 #### The Home Assistant Beginner’s Guide
+* [Install Home Assistant](https://www.home-assistant.io/getting-started/)
 * [The Home Assistant Beginner’s Guide Part 1: Setting up Hass.io](https://home-assistant-guide.com/2018/04/05/the-home-assistant-beginners-guide-part-1-setting-up-hass-io/)
 * [The Home Assistant Beginner’s Guide Part 2: Web Access](https://home-assistant-guide.com/2018/05/24/the-home-assistant-beginners-guide-part-2-web-access/)
 * [The Home Assistant Beginner’s Guide Part 3: Integrating Home Assistant with the Google Assistant/Google Home](https://home-assistant-guide.com/2018/05/24/the-home-assistant-beginners-guide-part-3-integrating-home-assistant-with-the-google-assistant-google-home/)
