@@ -24,3 +24,8 @@ ESP32 programerings kursus 2020
 #### Home Automation With Home Assistant and ESPHome
 * [Home Automation With Home Assistant and ESPHome - First Steps](https://www.youtube.com/watch?v=xDbH-xPQtXU)
   * [ESPHome](https://esphome.io/)
+##### [Average Automation](https://www.youtube.com/channel/UCMR_eJdL5P6SVJ2n0kTCjlg/videos)
+* [Home Assistant 101 Installing](https://www.youtube.com/watch?v=9-s8379D5vg)
+* [Home assistant 102 Add-ons](https://www.youtube.com/watch?v=iNNkmFJJ6Hk)
+* [Home assistant 103 ESPhome custom Relays and Temperature](https://www.youtube.com/watch?v=s3Dvl8wLPSw&list=PLyxwEDtrc_EU_AsqiN2cBUJvrhFeOGAUI&index=2)
+* [Home assistant 104 ESPHome Multi sensor](https://www.youtube.com/watch?v=7RpgxiIjulw)
