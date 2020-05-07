@@ -29,3 +29,5 @@ ESP32 programerings kursus 2020
 * [Home assistant 102 Add-ons](https://www.youtube.com/watch?v=iNNkmFJJ6Hk)
 * [Home assistant 103 ESPhome custom Relays and Temperature](https://www.youtube.com/watch?v=s3Dvl8wLPSw&list=PLyxwEDtrc_EU_AsqiN2cBUJvrhFeOGAUI&index=2)
 * [Home assistant 104 ESPHome Multi sensor](https://www.youtube.com/watch?v=7RpgxiIjulw)
+##### IHC Controller
+* [IHC Controller integration for Home Assistant](https://www.home-assistant.io/integrations/ihc/)
