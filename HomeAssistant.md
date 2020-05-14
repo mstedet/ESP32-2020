@@ -1,12 +1,80 @@
 # Video og vejledninger om HomeAssistant
 ## Se videoerne læs teksterne før du går igang med installation 
 jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge vores ESP32 i hvores hjem. 
-* By Juan
-  * 1. [Beginner’s Guide to Home Assistant](https://www.juanmtech.com/guide-to-home-assistant/)
-  * 2. [Home Assistant – Beginner’s guide Based on HassOS](https://www.juanmtech.com/home-assistant-hassos-beginners-guide/)
-  * 3. [How to set up themes in Home Assistant](https://www.juanmtech.com/themes-in-home-assistant/)
-  * 4. [How to set up Lovelace on Home Assistant](https://www.juanmtech.com/how-to-set-up-lovelace-on-home-assistant/)
-  * 5. [How to set up the Picture Elements card in Home Assistant – Lovelace](https://www.juanmtech.com/set-up-the-picture-elements-card-in-home-assistant/)
-  * 6. [Home Assistant new user interface and UI editor](https://www.juanmtech.com/home-assistant-new-user-interface-and-ui-editor/)
-  * 7. [How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)
+* [By Juan](https://www.juanmtech.com/)
+  * [Beginner’s Guide to Home Assistant](https://www.juanmtech.com/guide-to-home-assistant/)
+  * [Home Assistant – Beginner’s guide Based on HassOS](https://www.juanmtech.com/home-assistant-hassos-beginners-guide/)
+  * [How to set up themes in Home Assistant](https://www.juanmtech.com/themes-in-home-assistant/)
+  * [How to set up Lovelace on Home Assistant](https://www.juanmtech.com/how-to-set-up-lovelace-on-home-assistant/)
+  * [How to set up the Picture Elements card in Home Assistant – Lovelace](https://www.juanmtech.com/set-up-the-picture-elements-card-in-home-assistant/)
+  * [Home Assistant new user interface and UI editor](https://www.juanmtech.com/home-assistant-new-user-interface-and-ui-editor/)
+  * [How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)
   
+# Min Test installation Raspberry Pi 4 
+ 
+Supervisor Add-on store
+## Terminal $ SSH
+Configuration:
+```
+authorized_keys:
+  - >-
+    ssh-rsa
+    AAAAB3NzaC1yc2EAAAADAQABAAABAQCxuzaCFj1J7Jf7r9NqPGtmHoSF....
+password: ''
+```
+Network
+```
+22
+```
+## Samba
+Configuration:
+```
+workgroup: WORKGROUP
+username: admin
+password: password
+interface: ''
+allow_hosts:
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - 'fe80::/10'
+veto_files:
+  - ._*
+  - .DS_Store
+  - Thumbs.db
+  - icon?
+  - .Trashes
+compatibility_mode: false
+```
+Mount SMB fra Linux
+```
+smb://admin@homeassistant/config
+```
+## File editor
+Configuration:
+```
+dirsfirst: false
+enforce_basepath: true
+ignore_pattern:
+  - __pycache__
+  - .cloud
+  - .storage
+  - deps
+ssh_keys: []
+```
+## ESPHome
+Manage add-on repositories
+```
+https://github.com/esphome/hassio
+```
+Configuration:
+```
+```
+## Visual Studio Code kun på 64bit version
+Configuration:
+```
+```
+
+```
+
+```
