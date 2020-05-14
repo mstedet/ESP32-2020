@@ -15,10 +15,17 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
 # Min Test installation på en Raspberry Pi 4 
 ## Installations filer hentes her
 * [Installing Home Assistant](https://www.home-assistant.io/hassio/installation/)
-  * [Raspberry Pi 4 Model B 32bit (recommended)](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-3.13.img.gz)
-  * [Raspberry Pi 4 Model B 64bit](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-64-3.13.img.gz)
-  * [VDI for Virtualbox installation](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_ova-3.13.vdi.gz)
-
+  * Raspberry Pi 3
+    * [Raspberry Pi 3 Model B and B+ 32bit (recommended)](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi3-3.13.img.gz)
+    * Raspberry Pi 3 Model B and B+ 64bit](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi3-64-3.13.img.gz)    
+  * Raspberry Pi 4
+    * [Raspberry Pi 4 Model B 32bit (recommended)](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-3.13.img.gz)
+    * [Raspberry Pi 4 Model B 64bit](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-64-3.13.img.gz)
+  * VirtualBox PC/Mac
+    * [VDI for Virtualbox installation](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_ova-3.13.vdi.gz)
+* balenaEtcher et flash program 
+  * [balenaEtcher vælg system](https://www.balena.io/etcher/)
+  
 ## Supervisor Add-on store
 ### Terminal $ SSH
 Configuration:
