@@ -10,10 +10,15 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
   * [Home Assistant new user interface and UI editor](https://www.juanmtech.com/home-assistant-new-user-interface-and-ui-editor/)
   * [How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)
   
-# Min Test installation Raspberry Pi 4 
- 
-Supervisor Add-on store
-## Terminal $ SSH
+# Min Test installation på en Raspberry Pi 4 
+## Installations filer hentes her
+* [Installing Home Assistant](https://www.home-assistant.io/hassio/installation/)
+  * [Raspberry Pi 4 Model B 32bit (recommended)](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-3.13.img.gz)
+  * [Raspberry Pi 4 Model B 64bit](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_rpi4-64-3.13.img.gz)
+  * [VDI for Virtualbox installation](https://github.com/home-assistant/operating-system/releases/download/3.13/hassos_ova-3.13.vdi.gz)
+
+## Supervisor Add-on store
+### Terminal $ SSH
 Configuration:
 ```
 authorized_keys:
@@ -26,7 +31,7 @@ Network
 ```
 22
 ```
-## Samba
+### Samba
 Configuration:
 ```
 workgroup: WORKGROUP
@@ -50,7 +55,7 @@ Mount SMB fra Linux
 ```
 smb://admin@homeassistant/config
 ```
-## File editor
+### File editor
 Configuration:
 ```
 dirsfirst: false
@@ -62,7 +67,7 @@ ignore_pattern:
   - deps
 ssh_keys: []
 ```
-## ESPHome
+### ESPHome
 Manage add-on repositories
 ```
 https://github.com/esphome/hassio
@@ -70,7 +75,7 @@ https://github.com/esphome/hassio
 Configuration:
 ```
 ```
-## Visual Studio Code kun på 64bit version
+### Visual Studio Code kun på 64bit version
 Configuration:
 ```
 ```
