@@ -11,6 +11,9 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
   * [How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)
 * [by misperry](https://www.youtube.com/channel/UCWL128ZuBbV8ruKrc0lk7Iw)
   * [Setting up Home Assistant Lovelace UI](https://www.youtube.com/watch?v=QEtX0uboxQA)
+* [Vaclav Chaloupka](https://www.youtube.com/channel/UCA5DCnztFFHgdEettFHZ2Kw)
+  * [Living with Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw)
+  * [Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw&list=PLhvGKnQhU0T0_bioWuwImEsZuLScNKd-i)
   
 # Min Test installation på en Raspberry Pi 4 
 ## Installations filer hentes her
