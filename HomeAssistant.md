@@ -31,6 +31,10 @@ Network
 ```
 22
 ```
+Access fra linux terminal:
+```
+ssh root@homeassistant.local
+```
 ### Samba
 Configuration:
 ```
