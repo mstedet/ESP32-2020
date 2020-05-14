@@ -9,6 +9,8 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
   * [How to set up the Picture Elements card in Home Assistant – Lovelace](https://www.juanmtech.com/set-up-the-picture-elements-card-in-home-assistant/)
   * [Home Assistant new user interface and UI editor](https://www.juanmtech.com/home-assistant-new-user-interface-and-ui-editor/)
   * [How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)
+* [by misperry](https://www.youtube.com/channel/UCWL128ZuBbV8ruKrc0lk7Iw)
+  * [Setting up Home Assistant Lovelace UI](https://www.youtube.com/watch?v=QEtX0uboxQA)
   
 # Min Test installation på en Raspberry Pi 4 
 ## Installations filer hentes her
@@ -85,5 +87,4 @@ Configuration:
 ```
 
 ```
-
 ```
