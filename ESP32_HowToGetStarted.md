@@ -235,3 +235,12 @@ text_sensor:
   - platform: version
     name: "Desk light ESPHome version"
 ```
+### [ESPHome Guides, Devices, Components, Cookbook](https://esphome.io/)
+* [Binary Sensor Component](https://esphome.io/components/binary_sensor/index.html)
+* [Switch Component](https://esphome.io/components/switch/)
+* [Status LED](https://esphome.io/components/status_led)
+* [Sensor Component](https://esphome.io/components/sensor/)
+  * [WiFi Signal Sensor](https://esphome.io/components/sensor/wifi_signal.html)
+  * [Uptime Sensor](https://esphome.io/components/sensor/uptime.html)
+  * [Version Text Sensor](https://esphome.io/components/text_sensor/index.html)
+* 
