@@ -69,7 +69,7 @@ compatibility_mode: false
 ```
 Mount SMB fra Linux
 ```
-smb://admin@homeassistant/config
+smb://admin@homeassistant.local/config
 ```
 ### File editor
 Configuration:
@@ -280,4 +280,3 @@ INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
 [17:39:52][I][app:058]: setup() finished successfully!
 ```
 Kan esp32 ikke forbinde til netwærket, så check at du fik fjernet " som vist oven over.
- 
