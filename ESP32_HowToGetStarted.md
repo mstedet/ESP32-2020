@@ -199,6 +199,7 @@ Kan esp32 ikke forbinde til netwærket, så check at du fik fjernet " som vist o
 [ESP32-DevKitC Diagram](http://esp32.net/images/Ai-Thinker/NodeMCU-32S/Ai-Thinker_NodeMCU-32S_DiagramSchematic.png)  
 [ESP32_Function_Block_Diagram](http://esp32.net/images/_resources/ESP32_Function_Block_Diagram.svg)  
 
+### Edit "esp32_sonoff.yaml" file
 Nu skal der installeres configuration for LED & Relay, åben nu filen "esp32_sonoff.yaml" fra ESPHome og tilføj disse linier.
 
 ```
@@ -244,3 +245,16 @@ text_sensor:
   * [Uptime Sensor](https://esphome.io/components/sensor/uptime.html)
   * [Version Text Sensor](https://esphome.io/components/text_sensor/index.html)
 * 
+## 5. Forbind nu Relay, Led, Tast på vores test pcb
+* Desk light button
+  * Forbind "Desk light button" 1 ledning til stel (den sorte) og en gul ledning til GPIO0
+  * ![Foto001.png](/Images/foto001.png)
+* Desk light relay
+  * Forbind "Desk light relay" jeg bruger den røde Led til at indikerer et Relay, forbind en rød ledning til +3,3V og hvid ledning til GPIO12
+  * ![Foto002.png](/Images/foto002.png)
+* status_led
+  * Forbind "status_led" jeg bruger grøn Led som status Led, forbins rød ledning til +3,3V og en grøn ledning til GPIO13
+  * ![Foto003.png](/Images/foto003.png)
+* Nu er test pcb en klar til at afprøve programmet
+
+
