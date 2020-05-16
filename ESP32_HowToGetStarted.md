@@ -244,7 +244,15 @@ text_sensor:
   * [WiFi Signal Sensor](https://esphome.io/components/sensor/wifi_signal.html)
   * [Uptime Sensor](https://esphome.io/components/sensor/uptime.html)
   * [Version Text Sensor](https://esphome.io/components/text_sensor/index.html)
-* 
+* [ESPHome Core Configuration](https://esphome.io/components/esphome.html)
+  * [Configuration Types](https://esphome.io/guides/configuration-types.html)
+* CPU
+  * [Generic ESP8266](https://esphome.io/devices/esp8266.html)
+    * [ESP8266 <BOARD_TYPE>](https://docs.platformio.org/en/latest/platforms/espressif8266.html#boards)
+  * [Generic ESP32](https://esphome.io/devices/esp32.html)
+    * [ESP32 <BOARD_TYPE>](https://docs.platformio.org/en/latest/platforms/espressif32.html#boards)
+
+
 ## 5. Forbind nu Relay, Led, Tast på vores test pcb
 * Desk light button
   * Forbind "Desk light button" 1 ledning til stel (den sorte) og en gul ledning til GPIO0
