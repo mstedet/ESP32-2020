@@ -14,6 +14,8 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
 * [Vaclav Chaloupka](https://www.youtube.com/channel/UCA5DCnztFFHgdEettFHZ2Kw)
   * [Living with Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw)
   * [Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw&list=PLhvGKnQhU0T0_bioWuwImEsZuLScNKd-i)
+## Dokumentation
+* [Material Design Icons](https://cdn.materialdesignicons.com/4.5.95/)
   
 # Min Test installation på en Raspberry Pi 4 
 ## Installations filer hentes her

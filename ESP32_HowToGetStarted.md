@@ -1,5 +1,5 @@
 # EspHome - Sådan konfigurres en ESP32 i EspHome
-Her vil jeg prøve at oprette softwaren for en "esp32_sonoff" en ESP32 som kn fjernstyre til at tænde og slukke en lamp f.eks.  
+Her vil jeg prøve at oprette softwaren for en "esp32_sonoff" en ESP32 som kan fjernstyre til at tænde og slukke en lamp f.eks.  
 Kilde: [JuanMTech - How to get started with ESPHome and Sonoff](https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff/)  
 
 ## 1. Edit /config/esphome/secrets.yaml
