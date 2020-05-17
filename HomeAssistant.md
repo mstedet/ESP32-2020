@@ -15,8 +15,17 @@ jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge 
   * [Living with Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw)
   * [Home Assistant](https://www.youtube.com/watch?v=eaPAhYscCZw&list=PLhvGKnQhU0T0_bioWuwImEsZuLScNKd-i)
 ## Dokumentation
-* [Material Design Icons](https://cdn.materialdesignicons.com/4.5.95/)
-  
+
+![HA-logo](/Images/HA-Logo.png) 
+* [Home Assistant Documentation](https://www.home-assistant.io/docs/)  
+* [Lovelace UI](https://www.home-assistant.io/lovelace/)
+  * [Customizing entities](https://www.home-assistant.io/docs/configuration/customizing-devices/)
+  * [Material Design Icons](https://cdn.materialdesignicons.com/4.5.95/)  
+* [Automating Home Assistant](https://www.home-assistant.io/docs/automation/)
+
+![EspHome-logo](/Images/ESPHome-logo.png)
+* [ESPHome](https://esphome.io/)  
+
 # Min Test installation på en Raspberry Pi 4 
 ## Installations filer hentes her
 * [Installing Home Assistant](https://www.home-assistant.io/hassio/installation/)
