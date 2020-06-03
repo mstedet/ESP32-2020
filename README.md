@@ -35,3 +35,5 @@ ESP32 programerings kursus 2020
   * [Get Months of Battery Life from an ESP8266!](https://www.youtube.com/watch?v=1vs86fwEdtM) 
 ##### IHC Controller
 * [IHC Controller integration for Home Assistant](https://www.home-assistant.io/integrations/ihc/)
+### YAML-filer
+* [YAML | In One Video](https://www.youtube.com/watch?v=cdLNKUoMc6c&t=321s)
