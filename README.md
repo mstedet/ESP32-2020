@@ -31,6 +31,7 @@ ESP32 programerings kursus 2020
 * [Home assistant 103 ESPhome custom Relays and Temperature](https://www.youtube.com/watch?v=s3Dvl8wLPSw&list=PLyxwEDtrc_EU_AsqiN2cBUJvrhFeOGAUI&index=2)
 * [Home assistant 104 ESPHome Multi sensor](https://www.youtube.com/watch?v=7RpgxiIjulw)
 * DrZzs
-  * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant](https://www.youtube.com/watch?v=ENMul9eAB00&t=2s)* [Get Months of Battery Life from an ESP8266!](https://www.youtube.com/watch?v=1vs86fwEdtM) 
+  * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant](https://www.youtube.com/watch?v=ENMul9eAB00&t=2s)
+  * [Get Months of Battery Life from an ESP8266!](https://www.youtube.com/watch?v=1vs86fwEdtM) 
 ##### IHC Controller
 * [IHC Controller integration for Home Assistant](https://www.home-assistant.io/integrations/ihc/)
