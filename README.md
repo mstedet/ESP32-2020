@@ -33,6 +33,9 @@ ESP32 programerings kursus 2020
 * DrZzs
   * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant](https://www.youtube.com/watch?v=ENMul9eAB00&t=2s)
   * [Get Months of Battery Life from an ESP8266!](https://www.youtube.com/watch?v=1vs86fwEdtM) 
+* RC522 Arduino
+  * [HausnerR / esphome-door-lock](https://github.com/HausnerR/esphome-door-lock/blob/master/door_lock.yaml)
+  
 ##### IHC Controller
 * [IHC Controller integration for Home Assistant](https://www.home-assistant.io/integrations/ihc/)
 ### YAML-filer
