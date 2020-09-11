@@ -1,6 +1,8 @@
-# Opgave-01
+# Opgave-01 - Opret en ESP32 configurationsfil
 ## Forbind dit ESP32 Kort som vist på billederne  
-![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png) & ![Opgaver-01_schem.png](/Images/Opgaver-01_schem.png)  
+![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png)  
+![Opgaver-01_schem.png](/Images/Opgaver-01_schem.png)  
+### Ledninger tilsluttes som følger:
 1. De hvide stifter ved LED forbindes til sorte stifter ved ESP32 (stel)
 2. Den røde stift forbindes til ESP32 GPIO-12 
 3. Den grønne stift forbindes til ESP32 GPIO-13
@@ -8,9 +10,9 @@
 5. En hvid stift fra trykknap forbindes til ESP32 GPIO-2
 
 ## Start ESPHome
-Opret en configuration file:
+Opret en configuration file erstat xxxx med dine initialer:
 ```
-Device Name: esp32-01-xxxx
+Device Name: esp32_01_xxxx
 Device Type: Espressif ESP32 Dev Module
 WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
@@ -22,7 +24,7 @@ Resultatet bliver gemt i filen "/config/esphome/esp32-01-xxxx.yaml"
 du skal nu se en fil med indhold som dette:
 ```
 esphome:
-  name: esp32-01-xxxx
+  name: esp32_01_xxxx
   platform: ESP32
   board: esp32dev
 
@@ -32,7 +34,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "esp32-01-xxx Fallback Hotspot"
+    ssid: "esp32_01_xxxx Fallback Hotspot"
     password: "icec5M2D12pb"
 
 captive_portal:
