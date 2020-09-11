@@ -1,13 +1,4 @@
 # Opgave-01 - Opret en ESP32 configurationsfil
-## Forbind dit ESP32 Kort som vist på billederne  
-![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png)  
-![Opgaver-01_schem.png](/Images/Opgaver-01_schem.png)  
-### Ledninger tilsluttes som følger:
-1. De hvide stifter ved LED forbindes til sorte stifter ved ESP32 (stel)
-2. Den røde stift forbindes til ESP32 GPIO-12 
-3. Den grønne stift forbindes til ESP32 GPIO-13
-4. En hvide stift fra trykknap forbindes til sorte stifter ved ESP32 (stel)
-5. En hvid stift fra trykknap forbindes til ESP32 GPIO-2
 
 ## Start ESPHome
 Opret en configuration file erstat xxxx med dine initialer:
