@@ -34,7 +34,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "esp32_01_xxxx Fallback Hotspot"
+    ssid: "esp32_01_sekt Fallback Hotspot"
     password: "icec5M2D12pb"
 
 captive_portal:
@@ -359,8 +359,5 @@ INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
 help_outline   more_vert
 © 2019 Copyright ESPHome, Made with MaterializeESPHome 1.14.4 Documentation
 ```
-
-
-
 Hvis alt er gået godt er vi kalr til næste opgave
 
