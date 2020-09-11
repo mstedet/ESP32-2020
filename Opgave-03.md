@@ -12,12 +12,13 @@ OK, så du oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun no
 5. En hvid stift fra trykknap forbindes til ESP32 GPIO-2
 
 ## Tilføj komponenter til konfigurationsfilen
-Lad os gennemgå nogle af de tilgængelige indstillinger, som du kan tilføje. Klik på Rediger for at åbne konfigurationsfilen og indtaste følgende nederst:
+Lad os gennemgå nogle af de tilgængelige indstillinger, som du kan tilføje.  
+Klik på **[EDIT]** for at åbne konfigurationsfilen og indtaste følgende **nederst i filen**:
 ```
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO0
+      number: GPIO2
       mode: INPUT_PULLUP
       inverted: True
     name: "Desk light button"
@@ -47,7 +48,7 @@ text_sensor:
   - platform: version
     name: "Desk light ESPHome version"
 ```
-* binary_sensor: Checks for anytime the button on the Sonoff switch is pressed 
+* binary_sensor: Checks for anytime the button on the ESP32-kontakten is pressed 
 * switch: Would trigger the relay on and off 
 * status_led: Useful to show the status of a device. Letting you know of any warning or errors 
 * wifi_signal sensor: Monitors the received signal strength
