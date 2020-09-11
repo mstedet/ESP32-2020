@@ -1,4 +1,5 @@
-# Opgave-02 - Opret en Secretfil til at gemme password og andet du ikke ønsker i den configurationsfil
+# Opgave-02 - Opret en Secretfil 
+I ESPHome's secrets kan man gemme password og andet du ikke ønsker i sin configurationsfil
 ## Åben ESPHome's Secrets Editor
 * tilføj nu disse liner til filen:
 ```
