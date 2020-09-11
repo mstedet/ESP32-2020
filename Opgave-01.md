@@ -15,6 +15,7 @@ Device Type: Espressif ESP32 Dev Module
 WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
 Access Password: ""
+
 ```
 Resultatet bliver gemt i filen "/config/esphome/esp32-01-xxxx.yaml"
 
