@@ -1,6 +1,6 @@
 # Opgave-01
 ## Forbind dit ESP32 Kort som vist på billederne  
-![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png) & Opgaver-01_schem.png  
+![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png) & ![Opgaver-01_schem.png](/Images/Opgaver-01_schem.png)  
 1. De hvide stifter ved LED forbindes til sorte stifter ved ESP32 (stel)
 2. Den røde stift forbindes til ESP32 GPIO-12 
 3. Den grønne stift forbindes til ESP32 GPIO-13
