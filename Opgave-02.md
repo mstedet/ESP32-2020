@@ -36,7 +36,10 @@ til
     ssid: "esp32_01_sekt Fallback Hotspot"
     password: !secret My_AP_Pass
 ```
-### Gem den nye opsætning i din ESP32
+* Save & Close filen
+Filem bliver gemt som "/config/esphome/esp32_01_sekt.yaml"
+
+## Reprogramer din ESP32 med den nye opsætning
 * Vælg den USB-port som din ESP32 er forbundet til
 * Check Config, hvis ok så fortsæt med næste punkt ellers ret fejl
 * Upload nu ændringer til din ESP32

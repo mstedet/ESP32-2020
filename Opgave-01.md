@@ -47,6 +47,9 @@ api:
 
 ota:
 ```
+* Save & Close filen
+Filem bliver gemt som "/config/esphome/esp32_01_sekt.yaml"
+
 ## Forbind din ESP32 til en USB-port på din HomeAssistant
 * Restart ESPHome
 ## Programering af ESP32
