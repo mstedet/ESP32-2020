@@ -1,7 +1,10 @@
 # Opgave-03 - Byg en ESP32-kontakt med relæ og signal indikator
-OK, så du oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun nogle grundlæggende indstillinger. Hvis du skulle blinke firmwaren til ESP32-kontakten nu, ville den bare oprette forbindelse til din WiFi og intet andet. Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere komponenter. For eksempel skifteindstillingerne til at styre relæet for at tænde og slukke for ESP32-kontakten.
+OK, Du har nu oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun nogle grundlæggende indstillinger.  Din software vil bare oprette forbindelse til din WiFi og intet andet. 
+Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere komponenter. For eksempel styre relæet ved at trykke på ESP32-kontakten.
 
 ## Forbind dit ESP32 Kort som vist på billederne  
+Forbinder du nu de 2 LED og trykknappen til din ESP32, kan vi bruge den røde Led til at simulere et relæ og den grønne til at vise forbindelse status med.
+ 
 ![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png) 
 
 ### Ledninger tilsluttes som følger:
