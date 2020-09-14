@@ -1,5 +1,8 @@
 # Opgave-02 - Opret en Secretfil 
-I ESPHome's secrets kan man gemme password og andet du ikke ønsker i sin configurationsfil
+Gem adgangskoder og andre følsomme data ved hjælp af! Secret
+Ligesom i Home Assistant-konfigurationsfiler er det muligt at bruge! Secret i ESPHome. Så i stedet for at have følsomme oplysninger spredt over forskellige konfigurationsfiler, kan du gemme dem alle ét sted.
+ESPHome-dashboardet har en Secrets Editor tilgængelig, som er tilgængelig via menuikonet øverst til højre.
+
 ## Åben ESPHome's Secrets Editor
 * tilføj nu disse liner til filen:
 ```
@@ -8,10 +11,14 @@ My_WiFi_Pass: "12345678"
 My_Access_Pass: ""
 My_AP_Pass: "icec5M2D12pb"
 ```
-* Save & Close filen
-Filem bliver gemt som "/config/esphome/secrets.yaml"
+* Save & Close filen  
+
+Når du tilføjer noget for første gang via tekstbehandlingen, opretter ESPHome automatisk secrets.yaml-filen inde i ESPHome-mappen i mappen Home Assistant Config.   
+* Filem bliver gemt som "/config/esphome/secrets.yaml"
 
 ## Åben nu ESP32 configurationsfilen
+Efter lagring af data i filen secrets.yaml. For eksempel adgangskoden til WiFi kan du derefter gå til dine ESPHome-enheder og i konfigurationsfilen erstatte adgangskoden med følgende:
+
 ### Ret nu disse linier
 * fra
 ```
@@ -41,6 +48,8 @@ til
 Filem bliver gemt som "/config/esphome/esp32_01_sekt.yaml"
 
 ## Reprogramer din ESP32 med den nye opsætning
+Efter redigering af konfigurationsfilen skal du uploade den til enheden, og den vil erstatte det! Hemmelige navn med de faktiske data, der er på filen secrets.yaml.
+
 * Vælg den USB-port som din ESP32 er forbundet til
 * Check Config, hvis ok så fortsæt med næste punkt ellers ret fejl
 * Upload nu ændringer til din ESP32
@@ -238,5 +247,6 @@ INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
 help_outline   more_vert
 © 2019 Copyright ESPHome, Made with MaterializeESPHome 1.14.4 Documentation
 ```
-Hvis alt er gået godt er vi kalr til næste opgave
+Hvis alt er gået godt er vi kalr til trin 03
+
 
