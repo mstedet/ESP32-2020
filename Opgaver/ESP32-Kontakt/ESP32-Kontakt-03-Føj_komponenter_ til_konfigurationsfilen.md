@@ -1,11 +1,12 @@
-# Opgave-03 - Byg en ESP32-kontakt med relæ og signal indikator
+# ESP32-Kontakt-03-Føj_komponenter_ til_konfigurationsfilen
+
 OK, Du har nu oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun nogle grundlæggende indstillinger. Din software vil bare oprette forbindelse til din WiFi og intet andet. 
 Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere komponenter. For eksempel styre relæet ved at trykke på ESP32-kontakten.
 
 ## Forbind dit ESP32 Kort som vist på billederne  
 Forbinder du nu de 2 LED og trykknappen til din ESP32, kan vi bruge den røde Led til at simulere et relæ og den grønne til at vise forbindelse status med og bruge trykknappen som tænd og sluk kanp.
 
-![Opgaver-01_bb.png](/Images/Opgaver-01_bb.png) 
+![Opgaver-01_bb.png](/Images/ESP32-kontakten_bb.png) 
 
 ### Ledninger tilsluttes som følger:
 1. De hvide stifter ved LED forbindes til sorte stifter ved ESP32 (stel)

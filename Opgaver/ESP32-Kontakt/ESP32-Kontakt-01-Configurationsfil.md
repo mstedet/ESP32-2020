@@ -1,7 +1,9 @@
 # ESP32-Kontakt-01 - Opret en ESP32 configurationsfil
 
 ## Start ESPHome
-Opret en configuration file erstat xxxx med dine initialer:
+### Opret en konfigurationsfil
+For at oprette en ny konfigurationsfil til din esp32-kontakt, skal du tilføje en node i ESPHome Dashboard. Så klik på Plus “+” ikonet til højre og indtast et unikt navn for enheden (esp32-kontakt_xxxx). Navnet skal være med små bogstaver og uden mellemrum (tilladte tegn a-z, 0-9 og _). Under Enhedstype kan du vælge den enhed, du vil flashe fra rullemenuen. esp32-kontakt har en ESP32-chip, så vælg "Espressif ESP32 Dev Module". Indtast derefter WiFi-legitimationsoplysningerne, og klik til sidst på Send.
+* Opret en configuration file erstat xxxx med dine initialer:
 ```
 Device Name: esp32-kontakt_xxxx
 Device Type: Espressif ESP32 Dev Module
@@ -9,7 +11,7 @@ WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
 Access Password: ""
 ```
-Resultatet bliver gemt i filen "/config/esphome/esp32-01-xxxx.yaml"
+* Resultatet bliver gemt i filen "/config/esphome/esp32-kontakt_xxxx.yaml"
 
 ## Åben nu ESPHome's' Editor
 du skal nu se en fil med indhold som dette:
@@ -38,8 +40,8 @@ api:
 
 ota:
 ```
-* Save & Close filen
-Filem bliver gemt som "/config/esphome/esp32-kontakt_xxxx.yaml"
+## Save & Close filen
+* Filem bliver gemt som "/config/esphome/esp32-kontakt_xxxx.yaml"
 
 ## Forbind din ESP32 til en USB-port på din HomeAssistant
 * Restart ESPHome
@@ -53,16 +55,16 @@ Filem bliver gemt som "/config/esphome/esp32-kontakt_xxxx.yaml"
 ESPHome Dashboardmore_vert
 /dev/ttyUSB0 (CP2102 USB to UART Bridge Controller)
 memory
-esp32_01_sektmore_vert
- . Full path: /config/esphome/esp32_01_sekt.yaml
+esp32-kontakt_xxxx more_vert
+ . Full path: /config/esphome/esp32-kontakt_xxxx.yaml
 
 UPLOAD EDIT SHOW LOGS VALIDATE
 Compile And Upload esp32_01_sekt.yaml
-INFO Reading configuration /config/esphome/esp32_01_sekt.yaml...
+INFO Reading configuration /config/esphome/esp32-kontakt_xxxx.yaml...
 INFO Generating C++ source...
 INFO Core config or version changed, cleaning build files...
 INFO Compiling app...
-INFO Running:  platformio run -d /config/esphome/esp32_01_sekt
+INFO Running:  platformio run -d /config/esphome/esp32-kontakt_xxxx
 Processing esp32_01_sekt (board: esp32dev; framework: arduino; platform: espressif32@1.12.1)
 --------------------------------------------------------------------------------
 HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
@@ -334,7 +336,7 @@ INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
 [16:41:13][C][wifi:284]:   IP Address: 192.168.8.103
 [16:41:13][C][wifi:286]:   BSSID: [redacted]
 [16:41:13][C][wifi:287]:   Hostname: 'esp32_01_sekt'
-[16:41:13][C][wifi:291]:   Signal strength: -40 dB ▂▄▆█
+[16:41:13][C][wifi:291]:   Signal strength: -40 dB ▂▄▆█ 
 [16:41:13][C][wifi:295]:   Channel: 11
 [16:41:13][C][wifi:296]:   Subnet: 255.255.255.0
 [16:41:13][C][wifi:297]:   Gateway: 192.168.8.1
