@@ -6,7 +6,7 @@ Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere
 ## Forbind dit ESP32 Kort som vist på billederne  
 Forbinder du nu de 2 LED og trykknappen til din ESP32, kan vi bruge den røde Led til at simulere et relæ og den grønne til at vise forbindelse status med og bruge trykknappen som tænd og sluk kanp.
 
-![Opgaver-01_bb.png](/Images/ESP32-kontakten_bb.png) 
+![ESP32-Kontakt](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_bb.png) 
 
 ### Ledninger tilsluttes som følger:
 1. De hvide stifter ved LED forbindes til sorte stifter ved ESP32 (stel)
