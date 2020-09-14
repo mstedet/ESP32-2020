@@ -1,9 +1,9 @@
-# Opgave-01 - Opret en ESP32 configurationsfil
+# ESP32-Kontakt-01 - Opret en ESP32 configurationsfil
 
 ## Start ESPHome
 Opret en configuration file erstat xxxx med dine initialer:
 ```
-Device Name: esp32_01_xxxx
+Device Name: esp32-kontakt_xxxx
 Device Type: Espressif ESP32 Dev Module
 WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
@@ -15,7 +15,7 @@ Resultatet bliver gemt i filen "/config/esphome/esp32-01-xxxx.yaml"
 du skal nu se en fil med indhold som dette:
 ```
 esphome:
-  name: esp32_01_xxxx
+  name: esp32-kontakt_xxxx
   platform: ESP32
   board: esp32dev
 
@@ -25,7 +25,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "esp32_01_sekt Fallback Hotspot"
+    ssid: "esp32-kontakt_sekt Fallback Hotspot"
     password: "icec5M2D12pb"
 
 captive_portal:
@@ -39,7 +39,7 @@ api:
 ota:
 ```
 * Save & Close filen
-Filem bliver gemt som "/config/esphome/esp32_01_sekt.yaml"
+Filem bliver gemt som "/config/esphome/esp32-kontakt_xxxx.yaml"
 
 ## Forbind din ESP32 til en USB-port på din HomeAssistant
 * Restart ESPHome
@@ -353,5 +353,5 @@ INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
 help_outline   more_vert
 © 2019 Copyright ESPHome, Made with MaterializeESPHome 1.14.4 Documentation
 ```
-Hvis alt er gået godt er vi kalr til næste opgave
+Hvis alt er gået godt er vi klar til trin 02
 
