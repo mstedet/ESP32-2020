@@ -59,6 +59,16 @@ switch:
     inverted: true
     id: relay_2
   - platform: gpio
+    pin: GPIO25
+    name: "Desk light relay 3"
+    inverted: true
+    id: relay_3
+  - platform: gpio
+    pin: GPIO33
+    name: "Desk light relay 4"
+    inverted: true
+    id: relay_4
+  - platform: gpio
     pin: GPIO14
     name: "Red LED"
     inverted: true
