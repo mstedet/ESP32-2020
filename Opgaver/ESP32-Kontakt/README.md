@@ -1,6 +1,14 @@
-# ESP32-Kontakt  
+# ESP32_Kontakt  
 ## Diagram  
 ![ESP32-Kontakt](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_bb.png) 
+## Configfil
+```
+Device Name: esp32_kontakt_xxxx
+Device Type: Espressif ESP32 Dev Module
+WiFi SSID: "HUAWEI-ESP32"
+WiFi Password: "12345678"
+Access Password: ""
+```
 ## Kode
 ```
 esphome:
@@ -14,7 +22,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Esp32-Kontakt Sekt"
+    ssid: "Esp32_Kontakt Sekt"
     password: !secret My_AP_Pass
 
 captive_portal:
@@ -74,7 +82,7 @@ switch:
     inverted: true
     id: RedLed
   - platform: template
-    name: "template test"
+    name: "Desk light Template"
     optimistic: true
     id: relayandled
     turn_on_action:
@@ -108,5 +116,5 @@ My_AP_Pass: "qwertyuiop"
 My_API_Pass: "asdfghjkl"
 My_OTA_Pass: "zxcvbnm"
 ```
-## Kilde & inspiration:
+## Kilde & Inspiration:
 Min opgave ESP32-Kontakt er stærkt Inspireret af Juan [@juanmtech ](https://twitter.com/JuanMTech) April 8, 2019, https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff, jeg har ændret den til at bruge ESP32 som vores udviklingskort [ESP32-Seniorhus-2020-1](https://github.com/sekt1953/ESP32-Seniorhus-2020-1) er baseret på.
