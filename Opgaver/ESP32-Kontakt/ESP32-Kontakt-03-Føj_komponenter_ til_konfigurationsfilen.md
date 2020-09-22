@@ -70,7 +70,7 @@ Vi har nu oprettet kode til de komponenter som vi selv har tilføjet vores udvik
 *  [WiFi Signal Sensor](https://esphome.io/components/sensor/wifi_signal.html)
 *  [WiFi Info Text Sensor](https://esphome.io/components/text_sensor/wifi_info.html)
 *  [Uptime Sensor](https://esphome.io/components/sensor/uptime.html)  
-*  [Version Text Sensor](https://esphome.io/components/text_sensor/version.html)
+*  [Version Text Sensor](https://esphome.io/components/text_sensor/version.html)  
 herunder ses koden for disse 4 sensor:
 ```
 sensor:
