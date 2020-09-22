@@ -1,4 +1,4 @@
-# Opgave-02 - Opret en Secretfil 
+# 02 - Opret en Secretfil 
 Gem adgangskoder og andre følsomme data ved hjælp af! Secret
 Ligesom i Home Assistant-konfigurationsfiler er det muligt at bruge! Secret i ESPHome. Så i stedet for at have følsomme oplysninger spredt over forskellige konfigurationsfiler, kan du gemme dem alle ét sted.
 ESPHome-dashboardet har en Secrets Editor tilgængelig, som er tilgængelig via menuikonet øverst til højre.
