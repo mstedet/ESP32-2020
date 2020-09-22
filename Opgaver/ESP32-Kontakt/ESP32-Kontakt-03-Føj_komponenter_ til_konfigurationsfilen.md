@@ -1,4 +1,4 @@
-# ESP32-Kontakt-03-Føj_komponenter_ til_konfigurationsfilen
+# 03-Tilføj Trykknapper og Lysdioder til konfigurationsfilen
 
 OK, Du har nu oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun nogle grundlæggende indstillinger. Din software vil bare oprette forbindelse til din WiFi og intet andet. 
 Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere komponenter. For eksempel styre relæet ved at trykke på ESP32-kontakten.
@@ -6,7 +6,7 @@ Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere
 ## Forbind dit ESP32 Kort som vist på billederne  
 Forbinder du nu de 2 LED og trykknappen til din ESP32, kan vi bruge den Røde-Led til at simulere et relæ og den grønne til at vise forbindelse status med og bruge trykknappen som tænd og sluk kanp.
 
-![ESP32-Kontakt](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_bb.png) 
+![ESP32-Kontakt_LED](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_LED_bb.png) 
 
 ### Ledninger tilsluttes som følger:
 1. Trykknapper
