@@ -120,8 +120,8 @@ text_sensor:
 ## Opgave beskrivelse:
 ESP32-Kontakt er en opgave hvor vi skal forbinde 2 tryk kontakter, 2 lysdioder (rød og grøn), og et relæprint med 4 relæer.
 * Grønd lysdiode skal bruges som indikator for WiFi-forbindelse (status led)
-* Trykkanp 1 skal tænde relæ 1 og rød lysdiode
-* Trykkanp 2 skal tænde relæ 2
+* Trykkanp 1 skal tænde relæ 1
+* Trykkanp 2 skal tænde relæ 2 og rød lysdiode
 ## Opgave trin
 * 01 Opret grundlæggende konfigurations fil
 * 02 Opret secret-fil til gemme password i, og ret konfigurations fil til at bruge filen 
@@ -129,5 +129,6 @@ ESP32-Kontakt er en opgave hvor vi skal forbinde 2 tryk kontakter, 2 lysdioder (
 * 04 Forbind Relæ-print og tilføj og ret kode
 * 05 OTA (Over_The_Air) opdateringer
 * 06 Tilføj status-led, sensor for WiFi signal, ESPHome version.
+* 07 Opret en template, som skifter tilstand på Relæ_2 og RødLysdiode samtidig. 
 
 Min opgave ESP32-Kontakt er stærkt Inspireret af Juan [@juanmtech ](https://twitter.com/JuanMTech) April 8, 2019, https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff, jeg har ændret den til at bruge ESP32 som vores udviklingskort [ESP32-Seniorhus-2020-1](https://github.com/sekt1953/ESP32-Seniorhus-2020-1) er baseret på.
