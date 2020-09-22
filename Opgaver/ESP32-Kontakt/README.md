@@ -1,7 +1,7 @@
 # ESP32_Kontakt  
 ## Diagram  
 ![ESP32-Kontakt](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_bb.png) 
-## Configfil
+## Config data for oprettelse af configurationsfil
 ```
 Device Name: esp32_kontakt_xxxx
 Device Type: Espressif ESP32 Dev Module
@@ -9,7 +9,16 @@ WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
 Access Password: ""
 ```
-## Kode
+## !secrets fil /config/esphome/secrecs.yaml
+```
+My_WiFi_SSID: "HUAWEI-ESP32"
+My_WiFi_Pass: "12345678"
+My_Access_Pass: "qazwsxedc"
+My_AP_Pass: "qwertyuiop"
+My_API_Pass: "asdfghjkl"
+My_OTA_Pass: "zxcvbnm"
+```
+## Kode / Configurationsfil /config/esphome/esp32_kontakt_sekt/
 ```
 esphome:
   name: esp32_kontakt_sekt
@@ -106,15 +115,6 @@ sensor:
 text_sensor:
   - platform: version
     name: "Desk Light ESPHome version"
-```
-## !secrets
-```
-My_WiFi_SSID: "HUAWEI-ESP32"
-My_WiFi_Pass: "12345678"
-My_Access_Pass: "qazwsxedc"
-My_AP_Pass: "qwertyuiop"
-My_API_Pass: "asdfghjkl"
-My_OTA_Pass: "zxcvbnm"
 ```
 ## Kilde & Inspiration:
 Min opgave ESP32-Kontakt er stærkt Inspireret af Juan [@juanmtech ](https://twitter.com/JuanMTech) April 8, 2019, https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff, jeg har ændret den til at bruge ESP32 som vores udviklingskort [ESP32-Seniorhus-2020-1](https://github.com/sekt1953/ESP32-Seniorhus-2020-1) er baseret på.
