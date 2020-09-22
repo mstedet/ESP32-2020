@@ -14,9 +14,10 @@ Forbinder du nu de 2 LED og trykknappen til din ESP32, kan vi bruge den Røde-Le
    2. En hvid stift fra trykknap_1 forbindes til ESP32 GPIO4
    3. En hvid stift fra trykknap_2 forbindes til ESP32 GPIO0
 2. Lysdioder
-   1. De Røde stifter ved Lysdiode forbindes til Røde stifter ved ESP32 (+3,3V)
-   2. Den Hvide stift fra den Røde Lysdiode forbindes til ESP32 GPIO14 
-   3. Den Hvide stift fra den Grønne Lysdiode forbindes til ESP32 GPIO12
+   1. Den Røde stift fra Røde Lysdiode forbindes til en af de Røde stifter ved ESP32 (+3,3V)
+   2. Den Grønne stift fra Grønne Lysdiode forbindes en af de til Røde stifter ved ESP32 (+3,3V)
+   3. Den Hvide stift fra den Røde Lysdiode forbindes til ESP32 GPIO14 
+   4. Den Hvide stift fra den Grønne Lysdiode forbindes til ESP32 GPIO12
 
 ## Tilføj komponenter til konfigurationsfilen
 De første komponenter vi vil tilføje er vores trykknapper, trykknapper er af typen [GPIO Binary Sensor](https://esphome.io/components/binary_sensor/gpio.html), herunder er vist koden: 
