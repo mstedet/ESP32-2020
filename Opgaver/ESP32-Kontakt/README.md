@@ -90,6 +90,7 @@ switch:
     name: "Red LED"
     inverted: true
     id: RedLed
+  
   - platform: template
     name: "Desk light Template"
     optimistic: true
@@ -107,14 +108,25 @@ status_led:
     
 sensor:
   - platform: wifi_signal
-    name: "Desk Light WiFi Signal"
+    name: "Desk light WiFi signal"
     update_interval: 60s
+
   - platform: uptime
-    name: "Desk Light Uptime"
+    name: "Desk light uptime"
 
 text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+    ssid:
+      name: ESP Connected SSID
+    bssid:
+      name: ESP Connected BSSID
+    mac_address:
+      name: ESP Mac Wifi Address
+
   - platform: version
-    name: "Desk Light ESPHome version"
+    name: "Desk light ESPHome version"
 ```
 # Beskrivelse & Inspiration:
 ## Opgave beskrivelse:
