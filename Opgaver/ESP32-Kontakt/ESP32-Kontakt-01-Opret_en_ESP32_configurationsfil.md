@@ -1,4 +1,4 @@
-# ESP32-Kontakt-01 - Opret en ESP32 configurationsfil
+# 01 - Opret en ESP32 configurationsfil
 
 ## Start ESPHome
 ### Opret en konfigurationsfil
