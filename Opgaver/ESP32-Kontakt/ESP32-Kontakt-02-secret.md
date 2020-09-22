@@ -65,7 +65,7 @@ ota:
 til
 ```
 ota:
-  password: !secret My_OTA_OldPass
+  password: !secret My_OTA_Pass
 ```
 
 * Save & Close filen
