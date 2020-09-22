@@ -17,7 +17,7 @@ Access Password: ""
 du skal nu se en fil med indhold som dette:
 ```
 esphome:
-  name: esp32-kontakt_xxxx
+  name: esp32_kontakt_xxxx
   platform: ESP32
   board: esp32dev
 
@@ -27,7 +27,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "esp32-kontakt_sekt Fallback Hotspot"
+    ssid: "esp32_kontakt_sekt Fallback Hotspot"
     password: "icec5M2D12pb"
 
 captive_portal:
