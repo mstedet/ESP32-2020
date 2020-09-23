@@ -55,7 +55,7 @@ status_led:
     number: GPIO12
     inverted: yes
 ```
-Vi har nu tilføjet vores komponenter, den kan nu betjenes fra vores [HomeAssistant](http://homeassistant-41.local:8123/lovelace/default_view), men vi kan ikke tænde og slukke vores Lysdiode fra trykkanp_1 for at få denne funktion skal vi tilføje en handling til bores Trykknap_1, koden er vist herunder:
+Vi har nu tilføjet vores komponenter, den kan nu betjenes fra vores [HomeAssistant](http://homeassistant.local:8123/lovelace/default_view), men vi kan ikke tænde og slukke vores Lysdiode fra trykkanp_1 for at få denne funktion skal vi tilføje en handling til bores Trykknap_1, koden er vist herunder:
 ```
 binary_sensor:
   - platform: gpio
