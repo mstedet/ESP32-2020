@@ -141,7 +141,7 @@ ESP32-Kontakt er en opgave hvor vi skal forbinde 2 tryk kontakter, 2 lysdioder (
 3. Brug OTA (Over_The_Air) til software opdateringer
 4. Forbind Trykknapper, Lysdioder, status-led, sensor for WiFi signal & ESPHome version og tilføj kode for dem
 5. Forbind Relæ-print og tilføj og ret kode
-6. Opret en template, som skifter tilstand på Relæ_2 og RødLysdiode samtidig. 
+6. Opret en [Template Switch](https://esphome.io/components/switch/template.html), som skifter tilstand på Relæ_2 og RødLysdiode samtidig. 
 
 ## Inspiration:
 Min opgave ESP32-Kontakt er stærkt Inspireret af Juan [@juanmtech ](https://twitter.com/JuanMTech) April 8, 2019, https://www.juanmtech.com/how-to-get-started-with-esphome-and-sonoff, jeg har ændret den til at bruge ESP32 som vores udviklingskort [ESP32-Seniorhus-2020-1](https://github.com/sekt1953/ESP32-Seniorhus-2020-1) er baseret på.

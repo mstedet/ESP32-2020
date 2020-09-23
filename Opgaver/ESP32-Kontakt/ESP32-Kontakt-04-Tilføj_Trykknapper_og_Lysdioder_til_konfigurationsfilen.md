@@ -1,4 +1,4 @@
-# 03-Tilføj Trykknapper og Lysdioder til konfigurationsfilen
+# 04-Tilføj Trykknapper og Lysdioder til konfigurationsfilen
 
 OK, Du har nu oprettede konfigurationsfilen til ESP32-kontakten. Det har dog kun nogle grundlæggende indstillinger. Din software vil bare oprette forbindelse til din WiFi og intet andet. 
 Så du bliver nødt til at redigere konfigurationsfilen og tilføje et par flere komponenter. For eksempel styre relæet ved at trykke på ESP32-kontakten.
