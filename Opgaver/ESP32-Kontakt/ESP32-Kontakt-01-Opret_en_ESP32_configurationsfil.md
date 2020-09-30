@@ -2,16 +2,18 @@
 
 ## Start ESPHome
 ### Opret en konfigurationsfil
-For at oprette en ny konfigurationsfil til din esp32-kontakt, skal du tilføje en node i ESPHome Dashboard. Så klik på Plus “+” ikonet til højre og indtast et unikt navn for enheden (esp32-kontakt_xxxx). Navnet skal være med små bogstaver og uden mellemrum (tilladte tegn a-z, 0-9 og _). Under Enhedstype kan du vælge den enhed, du vil flashe fra rullemenuen. esp32-kontakt har en ESP32-chip, så vælg "Espressif ESP32 Dev Module". Indtast derefter WiFi-legitimationsoplysningerne, og klik til sidst på Send.
-* Opret en configuration file erstat xxxx med dine initialer:
+* f.eks. på data for configurationfilen erstat xxxx med dine initialer:
 ```
 Device Name: esp32-kontakt_xxxx
 Device Type: Espressif ESP32 Dev Module
 WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
-Access Password: ""
+Access Password: "qwertyuiop"
 ```
-* Resultatet bliver gemt i filen "/config/esphome/esp32-kontakt_xxxx.yaml"
+For at oprette en ny konfigurationsfil til din esp32-kontakt, skal du tilføje en node i ESPHome Dashboard. Så klik på Plus “+” ikonet til højre og indtast et unikt navn for enheden f. eks. (**esp32-kontakt_xxxx**). Navnet skal være med små bogstaver og uden mellemrum (tilladte tegn a-z, 0-9 og _). Under Enhedstype kan du vælge den enhed, du vil flashe fra rullemenuen. esp32-kontakt har en ESP32-chip, så vælg "**Espressif ESP32 Dev Module**". Indtast derefter WiFi-legitimationsoplysningerne, i undervisningen er WiFi SSID: "**HUAWEI-ESP32**" og WiFi Password: "**12345678**" vælger du at indtaste et Access Password: f.eks "**qwertyuiop**" vil det være både API & OTA Password.  
+* **NB! Password skal være 8 tegn eller flere.**  
+* **Klik til sidst på Send.**
+* Resultatet bliver gemt i filen "**/config/esphome/esp32-kontakt_xxxx.yaml**"
 
 ## Åben nu ESPHome's' Editor
 du skal nu se en fil med indhold som dette:
@@ -37,11 +39,12 @@ logger:
 
 # Enable Home Assistant API
 api:
-
+  password: "qwertyuiop"
 ota:
+  password: "qwertyuiop"
 ```
 ## Save & Close filen
-* Filem bliver gemt som "/config/esphome/esp32-kontakt_xxxx.yaml"
+* Filem bliver gemt som "**/config/esphome/esp32-kontakt_xxxx.yaml**"
 
 ## Forbind din ESP32 til en USB-port på din HomeAssistant
 * Restart ESPHome

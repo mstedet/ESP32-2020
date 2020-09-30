@@ -45,7 +45,7 @@ switch:
     name: "Rød Lysdiode"
     pin: 
       number: GPIO14
-      inverted: yes
+      inverted: True
     id: RedLed
 ```
 Sidste komponent vi tilføjer nu er vores Grønne Lysdiode, den Grønne Lysdiode vælger jeg at bruge som [Status LED](https://esphome.io/components/status_led.html), herunder er vist koden:
@@ -53,7 +53,7 @@ Sidste komponent vi tilføjer nu er vores Grønne Lysdiode, den Grønne Lysdiode
 status_led:
   pin:
     number: GPIO12
-    inverted: yes
+    inverted: True
 ```
 Vi har nu tilføjet vores komponenter, den kan nu betjenes fra vores [http://homeAssistant.local:8123](http://homeassistant.local:8123/), men vi kan ikke tænde og slukke vores Lysdiode fra trykkanp_1 for at få denne funktion skal vi tilføje en handling til bores Trykknap_1, koden er vist herunder:
 ```
@@ -121,13 +121,13 @@ switch:
     name: "Rød Lysdiode"
     pin: 
       number: GPIO14
-      inverted: yes
+      inverted: True
     id: RedLed
 
 status_led:
   pin:
     number: GPIO12
-    inverted: yes
+    inverted: True
 
 sensor:
   - platform: wifi_signal
