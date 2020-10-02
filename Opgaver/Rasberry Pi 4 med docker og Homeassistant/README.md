@@ -1,4 +1,4 @@
-# Raspberry Pi 4, Homeassistant instaleret via docker
+# Raspberry Pi 4, Homeassistant installeret via docker
 ## Kilder:  
 * [#352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud)](https://www.youtube.com/watch?v=KJRMjUzlHI8)
 * [#341 Quickie: Raspberry Pi official USB Boot now much simpler. How fast is a cheap SSD?](https://www.youtube.com/watch?v=8vC3D19e_Ac)
@@ -39,8 +39,10 @@ sudo raspi-config
 ```
 Udfør nu følgende valg:
 
-* Vælg Boot Option
-* Vælg Boot ROM version
+* Vælg Boot Option  
+![RasPi_3_Boot_Option.png](./Images/RasPi_3_Boot_Option.png)  
+* Vælg Boot ROM version  
+![RasPi_B5_Boot_Rom_Version.png](./Images/RasPi_B5_Boot_Rom_Version.png)
 * vælg Latest
 * Vælg NO
 * Vælg Boot Order
