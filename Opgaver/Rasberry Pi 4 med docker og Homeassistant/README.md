@@ -22,7 +22,8 @@ i et terminalvindue
 * Forbind nu micro HDMI stikket til en skærm eller TV's HDMI med  [Micro HDMI til HDMI Adapter](https://raspberrypi.dk/produkt/micro-hdmi-til-hdmi-adapter-235mm-hvid/)
 * Forbind strømforsyningen og du kan tænde
 
-## Raspberry eeprom update
+## Config Raspberry Pi OS til boot fra USB-Disk i stedet for SD-Kort
+### 1. Opdater Raspberry Pi OS til nyeste filer & Opdater Raspberry Pi EEProm
 * Åben et terminal vindue og opdater Raspberry PI OS til nyeste version med disse kommandoer:
 ```
 sudo apt update && sudo apt full-upgrade
@@ -31,14 +32,13 @@ sudo apt update && sudo apt full-upgrade
 ```
 sudo rpi-eeprom-update -d -a
 ```
-## Raspberry Config
+### 2. Start Raspberry Pi OS config program
 * Start Raspberry config med denne kommando:
-
 ```
 sudo raspi-config
 ```
-Udfør nu følgende valg:
-### 1. Del Boot Option
+#### 1. Set Boot Option  
+* ![RasPi_Select_Finish.png](./Images/RasPi_Select_Finish.png)  
 * Vælg Boot Option  
 ![RasPi_3_Boot_Option.png](./Images/RasPi_3_Boot_Option.png)  
 * Vælg Boot ROM version  
@@ -47,11 +47,18 @@ Udfør nu følgende valg:
 ![RasPi_E1_Latest.png](./Images/RasPi_E1_Latest.png)
 * Vælg Nej  
 ![RasPi_Latest_Nej.png](./Images/RasPi_Latest_Nej.png)
-### 2. Del Boot Order
-* Vælg Boot Order
-* Vælg USB Boot
-* Vælg OK
-* Reboot
+#### 2. Set Boot Order
+* Vælg Boot Order  
+![RasPi_3_Boot_Option.png](./Images/RasPi_3_Boot_Option.png) 
+* Vælg USB Boot  
+* ![RasPi_B1_USB_Boot.png](./Images/RasPi_B1_USB_Boot.png) 
+* Vælg OK  
+* ![RasPi_USB_Device_is_default.png](./Images/RasPi_USB_Device_is_default.png) 
+* Vælg Finish  
+![RasPi_Select_Finish.png](./Images/RasPi_Select_Finish.png)  
+* vælg Ja for Reboot af Raspbery Pi
+* ![Raspi_Reboot_Now.png](./Images/Raspi_Reboot_Now.png) 
+### 3.
 * Indsæt USB Disk og behold SD-kort jeg bruger denne adapter til SSD-Disk [USB 3.0 til SATA 6Gb/s adapter - 2,5"/3,5"](https://www.av-cables.dk/usb-3-0-til-sata-adapter/usb-3-0-til-sata-6gb-s-adapter-2-5-3-5.html), da Raspberry Pi ikke kan levere strøm nok til disken, min SSD-Disk er [Kingston A400 240GB SSD SATA](https://www.proconsult.dk/product/hd-sa400s37-240g/kingston-a400-240gb-ssd-sata)
 * Vælg fra menu SD Card Copy, og kopi SD-Kort til SSD-Disk 
 * Sluk din Raspberry Pi når kopieringen er slut
