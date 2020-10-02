@@ -38,7 +38,6 @@ sudo rpi-eeprom-update -d -a
 sudo raspi-config
 ```
 #### 1. Set Boot Option  
-* ![RasPi_Select_Finish.png](./Images/RasPi_Select_Finish.png)  
 * Vælg Boot Option  
 ![RasPi_3_Boot_Option.png](./Images/RasPi_3_Boot_Option.png)  
 * Vælg Boot ROM version  
