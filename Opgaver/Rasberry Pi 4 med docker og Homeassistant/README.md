@@ -53,7 +53,7 @@ sudo raspi-config
 * ![RasPi_B1_USB_Boot.png](./Images/RasPi_B1_USB_Boot.png) 
 * Vælg OK  
 * ![RasPi_USB_Device_is_default.png](./Images/RasPi_USB_Device_is_default.png) 
-* Vælg Finish  
+* Vælg Finish   
 ![RasPi_Select_Finish.png](./Images/RasPi_Select_Finish.png)  
 * vælg Ja for Reboot af Raspbery Pi
 * ![Raspi_Reboot_Now.png](./Images/Raspi_Reboot_Now.png) 
