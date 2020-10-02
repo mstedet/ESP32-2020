@@ -38,13 +38,16 @@ sudo rpi-eeprom-update -d -a
 sudo raspi-config
 ```
 Udfør nu følgende valg:
-
+### 1. Del Boot Option
 * Vælg Boot Option  
 ![RasPi_3_Boot_Option.png](./Images/RasPi_3_Boot_Option.png)  
 * Vælg Boot ROM version  
 ![RasPi_B5_Boot_Rom_Version.png](./Images/RasPi_B5_Boot_Rom_Version.png)
-* vælg Latest
-* Vælg NO
+* vælg Latest  
+![RasPi_E1_Latest.png](./Images/RasPi_E1_Latest.png)
+* Vælg Nej  
+![RasPi_Latest_Nej.png](./Images/RasPi_Latest_Nej.png)
+### 2. Del Boot Order
 * Vælg Boot Order
 * Vælg USB Boot
 * Vælg OK
