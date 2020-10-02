@@ -59,9 +59,9 @@ sudo raspi-config
 * ![Raspi_Reboot_Now.png](./Images/Raspi_Reboot_Now.png) 
 ### 3.
 * Indsæt USB Disk og behold SD-kort jeg bruger denne adapter til SSD-Disk [USB 3.0 til SATA 6Gb/s adapter - 2,5"/3,5"](https://www.av-cables.dk/usb-3-0-til-sata-adapter/usb-3-0-til-sata-6gb-s-adapter-2-5-3-5.html), da Raspberry Pi ikke kan levere strøm nok til disken, min SSD-Disk er [Kingston A400 240GB SSD SATA](https://www.proconsult.dk/product/hd-sa400s37-240g/kingston-a400-240gb-ssd-sata)
-* Vælg fra menu SD Card Copy, og kopi SD-Kort til SSD-Disk 
-* Sluk din Raspberry Pi når kopieringen er slut
-* Fjern SD-Kort og Boot nu fra SSD-Disk
-
-
-
+* For a kopier SD-Kort til SSD-Disk
+  1. Åben Paspberry Pi OS menu Tilbehør -> SD Card Copier
+  2.  Sluk din Raspberry Pi når kopieringen er slut
+  3.  Fjern SD-Kort
+* Boot nu fra SSD-Disk,  
+og alt bør starte som var det et SD-Kort
