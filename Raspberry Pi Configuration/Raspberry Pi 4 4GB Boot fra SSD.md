@@ -14,8 +14,15 @@ Installer Raspberry Pi Imager til Raspberry Pi OS ved at køre
 i et terminalvindue
 
 ## Flash SD kort
-* Operating System vælges "Raspberry Pi OS (32-bit)" (Recommended)
-* SD Card vælges det du ønsker at boote fra
+* Operating System vælges "Raspberry Pi OS (32-bit)" (Recommended)  
+![Raspberry Pi Imager_OS](./Images/Raspberry_PI_Imager_OS.png)
+* SD Card vælges det du ønsker at boote fra  
+![Raspberry_Pi_Imager_CD_Card.png](./Images/Raspberry_Pi_Imager_CD_Card.png)
+* Vælg Write for at overfører Raspberry Pi OS til SD-Kortet  
+![Raspberry Pi Imager](./Images/Raspberry_Pi_Imager.png)
+* Skrivebprsessen er nu færdig tryk [CONTINUE]  
+![Raspberry_Pi_Imager_Done.png](./Images/Raspberry_Pi_Imager_Done.png)
+* SD-Kortet kan indsættes i din Raspberry Pi 4  
 
 ## Boot Raspberry fra SD-Kort
 * Indsætte SD-kortet i din Raspberry PI 
