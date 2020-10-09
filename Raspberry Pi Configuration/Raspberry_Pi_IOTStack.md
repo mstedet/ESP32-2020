@@ -9,7 +9,9 @@ git clone https://github.com/SensorsIot/IOTstack.git ~/IOTStack
 cd ~/IOTStack && bash ./menu.sh
 ```
 ### 1. Install Docker
+reboot når du bliver spurt
 ### 2. Build Stack
+
 #### 1. vælg Container
 * Portainer
 * Node-RED
@@ -24,3 +26,11 @@ Installer lidt programmer før installationen af Hassio
 ```
 sudo apt install network-manager apparmor
 ```
+
+
+## Start IOTstack
+``` 
+cd ~/IOTStack && docker-compose up -d
+``` 
+
+
