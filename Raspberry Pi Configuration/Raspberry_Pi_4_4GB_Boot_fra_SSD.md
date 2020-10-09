@@ -2,6 +2,7 @@
 ## Kilder:  
 * [#352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud)](https://www.youtube.com/watch?v=KJRMjUzlHI8)
 * [#341 Quickie: Raspberry Pi official USB Boot now much simpler. How fast is a cheap SSD?](https://www.youtube.com/watch?v=8vC3D19e_Ac)
+* [#295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IOTstack](https://www.youtube.com/watch?v=a6mjt8tWUws&feature=youtu.be)
 
 ## Installer Raspberry Pi Imager
 Brug Raspberry Pi Imager til en nem måde at installere Raspberry Pi OS og andre operativsystemer på et SD-kort klar til brug sammen med din Raspberry Pi:
@@ -35,10 +36,23 @@ i et terminalvindue
 ```
 sudo apt update && sudo apt full-upgrade
 ```
-* Opdater nu eeprommen med denne kommando:
+* Check om **stable release** er valgt, åben filen **/etc/default/rpi-eeprom-update** og ret indhold til **FIRMWARE_RELEASE_STATUS="stable"**, brug nano editoren til dette:
+```
+sudo nano /etc/default/rpi-eeprom-update
+```
+* Check for release version med denne kommando:
 ```
 sudo rpi-eeprom-update -d -a
 ```
+* List nu alle dine eeprom versioner, brug den nyeste
+```
+ls /lib/firmware/raspberrypi/bootloader/stable/
+``` 
+* Opdater nu eeprommen med denne kommando:
+```
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-09-03.bin
+```
+* Reboot nu 
 ### 2. Start Raspberry Pi OS config program
 * Start Raspberry config med denne kommando:
 ```

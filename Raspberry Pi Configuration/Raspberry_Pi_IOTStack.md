@@ -20,3 +20,7 @@ cd ~/IOTStack && bash ./menu.sh
 * Motioneye
 * Next Cloud
 ### 3. Install Hass.io
+Installer lidt programmer før installationen af Hassio
+```
+sudo apt install network-manager apparmor
+```
