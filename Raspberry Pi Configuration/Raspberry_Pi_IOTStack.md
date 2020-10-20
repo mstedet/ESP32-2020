@@ -28,8 +28,7 @@ reboot når du bliver spurt
 
 ## 4. Install Home Assistant
 * Vælg Install Home Assistant (Requires Docker)  
-![](./Images/DockerInstallHassio.png)
-installer nu Homeasssistent fra IOTstack
+![](./Images/DockerInstallHassio.png)  
 
 ## 5. Start IOTstack
 Start nu Docker med kommandoen herunder:
