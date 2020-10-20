@@ -34,9 +34,10 @@ Download VNC® Viewer to the device you want to control from, below. Make sure y
 
 * Hent **VNC-Standalone x64** her: https://www.realvnc.com/en/connect/download/viewer/   
   * Gem filen her: ~/.local/bin/
-* Hent **Real-VNC Icon** her: https://static.techspot.com/images2/downloads/topdownload/2014/06/realvnc.png  
-  * Gem filen her: ~/.local/share/icons/
-    * med filnavnet **real-VNC.png**
+* Hent **Real-VNC Icon** med denne kommando:
+``` 
+wget https://static.techspot.com/images2/downloads/topdownload/2014/06/realvnc.png -O ~/.local/share/icons/real-VNC.png
+``` 
 * Opret Desktop tilen **VNC-Viewer-6.20.529-Linux-x64.desktop**
   * med denne kommando 
 ``` 
