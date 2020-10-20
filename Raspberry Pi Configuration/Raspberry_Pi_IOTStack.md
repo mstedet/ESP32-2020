@@ -31,10 +31,19 @@ cd ~/IOTStack && docker-compose up -d
 
 # VNC Connect
 Download VNC® Viewer to the device you want to control from, below. Make sure you've installed VNC® Server on the computer you want to control.  
-https://www.realvnc.com/en/connect/download/viewer/
 
+* Hent **VNC-Standalone x64** her: https://www.realvnc.com/en/connect/download/viewer/   
+  * Gem filen her: ~/.local/bin/
+* Hent **Real-VNC Icon** her: https://static.techspot.com/images2/downloads/topdownload/2014/06/realvnc.png  
+  * Gem filen her: ~/.local/share/icons/
+    * med filnavnet **real-VNC.png**
+* Opret Desktop tilen **VNC-Viewer-6.20.529-Linux-x64.desktop**
+  * med denne kommando 
+``` 
+nano ~/.local/share/applications/VNC-Viewer-6.20.529-Linux-x64.desktop
+``` 
+og tilføj dette indhold til desktopfilen
 
-~/.local/share/applications/VNC-Viewer-6.20.529-Linux-x64.desktop
 ``` 
 [Desktop Entry]
 Type=Application
