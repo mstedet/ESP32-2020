@@ -7,5 +7,5 @@ Her bruger vi en rigtig Harddisk til vores data, den er hurtigere, og kan også 
 ### 2. [Raspberry Pi 4, IOTStack](./Raspberry_Pi_IOTStack.md)
 Her installer vi IOTStak's Docker container, og herunder installerer vi Home Assistent
 
-### 3. [Raspberry_VNC](./Raspberry_VNC.md)
-installation af VNC-Viewer for remote access af Raspberry Pi computer.
+### 3. [Raspberry VNC](./Raspberry_VNC.md)
+Installation af VNC-Viewer for remote access af Raspberry Pi computer.
