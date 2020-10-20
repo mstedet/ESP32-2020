@@ -6,3 +6,6 @@ Her bruges et SD-Kort min 32GB som disk, ikke den bedste og sikreste Disk
 Her bruger vi en rigtig Harddisk til vores data, den er hurtigere, og kan også tjene flere formål, som media-server, cloud-server som [NextCloud](https://nextcloud.com/athome/), mm..
 ### 2. [Raspberry Pi 4, IOTStack](./Raspberry_Pi_IOTStack.md)
 Her installer vi IOTStak's Docker container, og herunder installerer vi Home Assistent
+
+### 3. [Raspberry_VNC.md](./Raspberry_VNC.md)
+installation af VNC-Viewer for remote access af Raspberry Pi computer.
