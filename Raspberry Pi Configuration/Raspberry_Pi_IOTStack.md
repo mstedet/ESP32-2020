@@ -1,6 +1,6 @@
 # Raspberry Pi OS med IOTStack 
 
-Installer lidt programmer før installationen af Hassio
+Installer før installationen af Home Assistant følgende hjælpeprogrammer:
 ```
 sudo apt install network-manager apparmor-utils
 ```
@@ -9,21 +9,30 @@ sudo apt install network-manager apparmor-utils
 ```
 git clone https://github.com/SensorsIot/IOTstack.git ~/IOTStack
 ```
-## 2. Start menu.sh
+## 2. Install Docker
+* Start IOTstack menu med denne kommando:
 ```
 cd ~/IOTStack && bash ./menu.sh
 ```
-### 1. Install Docker
+* Vælg Install Docker
+![Install Docker](./Images/DockerInstall.png)
+* Afslut med at vælge <O.k.>  
+![Install Docker ja](./Images/DockerInstallJa.png)
 reboot når du bliver spurt
 
-### 2. Build Stack
+## 3. Build Stack 
+* Vælg Build Stack
+![](Images/DockerBuildStack.png)
+* Vælg følgende Container som vist og afslut med at vælge <O.k.>  
+![](Images/DockerContainerSelection.png)
 
-#### 1. vælg Container
-* Portainer
-### 3. Install Hass.io
+## 4. Install Home Assistant
+* Vælg Install Home Assistant (Requires Docker)
+![](./Images/DockerInstallHassio.png)
 installer nu Homeasssistent fra IOTstack
 
-## Start IOTstack
+## 5. Start IOTstack
+Start nu Docker med kommandoen herunder:
 ``` 
 cd ~/IOTStack && docker-compose up -d
 ``` 
