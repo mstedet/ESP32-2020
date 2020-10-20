@@ -29,12 +29,12 @@ cd ~/IOTStack && docker-compose up -d
 ``` 
 
 
-# VNC Connect
+# ![realvnc64.png](./Images/realvnc64.png) VNC Connect
 Download VNC® Viewer to the device you want to control from, below. Make sure you've installed VNC® Server on the computer you want to control.  
 
-* Hent **VNC-Standalone x64** her: https://www.realvnc.com/en/connect/download/viewer/   
+* Hent **VNC - Standalone x64** her: https://www.realvnc.com/en/connect/download/viewer/   
   * Gem filen her: ~/.local/bin/
-* Hent **Real-VNC Icon** med denne kommando:
+* Hent **Real-VNC Icon** ![realvnc32.png](./Images/realvnc32.png) med denne kommando:
 ``` 
 wget https://static.techspot.com/images2/downloads/topdownload/2014/06/realvnc.png -O ~/.local/share/icons/real-VNC.png
 ``` 
