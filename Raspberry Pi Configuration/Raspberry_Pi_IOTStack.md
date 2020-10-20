@@ -14,20 +14,20 @@ git clone https://github.com/SensorsIot/IOTstack.git ~/IOTStack
 ```
 cd ~/IOTStack && bash ./menu.sh
 ```
-* Vælg Install Docker
+* Vælg Install Docker  
 ![Install Docker](./Images/DockerInstall.png)
 * Afslut med at vælge <O.k.>  
 ![Install Docker ja](./Images/DockerInstallJa.png)
 reboot når du bliver spurt
 
 ## 3. Build Stack 
-* Vælg Build Stack
+* Vælg Build Stack  
 ![](Images/DockerBuildStack.png)
 * Vælg følgende Container som vist og afslut med at vælge <O.k.>  
 ![](Images/DockerContainerSelection.png)
 
 ## 4. Install Home Assistant
-* Vælg Install Home Assistant (Requires Docker)
+* Vælg Install Home Assistant (Requires Docker)  
 ![](./Images/DockerInstallHassio.png)
 installer nu Homeasssistent fra IOTstack
 
