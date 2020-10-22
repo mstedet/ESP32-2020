@@ -34,6 +34,4 @@ reboot når du bliver spurt
 Start nu Docker med kommandoen herunder:
 ``` 
 cd ~/IOTStack && docker-compose up -d
-
-rrr
 ``` 
