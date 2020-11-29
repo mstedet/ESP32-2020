@@ -1,6 +1,6 @@
 # Opgaver
-* ESP32-Kontakt
-* HomeAutomation
+* [ESP32-Kontakt](https://github.com/mstedet/ESP32-2020/tree/master/Opgaver/ESP32-Kontakt)
+* [HomeAutomation](https://github.com/mstedet/ESP32-2020/tree/master/Opgaver/Home%20Automation)
 
 ## Link
 * Andresa Spiess
