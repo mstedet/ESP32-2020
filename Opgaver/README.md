@@ -28,7 +28,7 @@ WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
 Access Password: ""
 ```
-## !secrets fil /config/esphome/secrecs.yaml
+## ESPHome - Default !secrets fil /config/esphome/secrecs.yaml
 ```
 My_WiFi_SSID: "HUAWEI-ESP32"
 My_WiFi_Pass: "12345678"
@@ -37,7 +37,7 @@ My_AP_Pass: "qwertyuiop"
 My_API_Pass: "asdfghjkl"
 My_OTA_Pass: "zxcvbnm"
 ```
-## Default-Configurationsfil /config/esphome/Inttialer_ProjectNavn_Version/
+## ESPHome - Default Configurationsfil /config/esphome/Inttialer_ProjectNavn_Version/
 ```
 esphome:
   name: <Inttialer>_<ProjectNavn>_<Version>
