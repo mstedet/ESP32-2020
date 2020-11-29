@@ -37,7 +37,7 @@ My_AP_Pass: "qwertyuiop"
 My_API_Pass: "asdfghjkl"
 My_OTA_Pass: "zxcvbnm"
 ```
-## Default-Configurationsfil /config/esphome/<Inttialer>_<ProjectNavn>_<Version>/
+## Default-Configurationsfil /config/esphome/Inttialer_ProjectNavn_Version/
 ```
 esphome:
   name: <Inttialer>_<ProjectNavn>_<Version>
