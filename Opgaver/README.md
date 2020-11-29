@@ -13,7 +13,9 @@
   * [Create a professional alarm system in Home Assistant. This is how!](https://www.youtube.com/watch?v=JPSDAszlII4&list=PLKuGrHcHLKMjYTsVN8IAKPLE21MbqkISO)
 * [ Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
   * [Installing Home Assistant OS (Hassio) on Raspberry Pi and Quick Lovelace Tour/Overview](https://www.youtube.com/watch?v=SHg6fa0x7OA)
-
+### Home Automation - Lovelace
+* [Home Sight](https://www.youtube.com/channel/UCT4bjO68FpyOsVoQAe45MGQ)
+  * [Home Assistant how to create a Lovelace 3D floorplan with light overlays and buttons - Pt1](https://www.youtube.com/watch?v=xGIH6MlbRn0)
 # ESP 32 Pin Layout :
 ![ESP32 PinLayout](/Images/ESP32S-HiLetgo_1377x724.png)  
 [ESP32S-HiLetgo Dev Boad with Pinout Template](https://forum.fritzing.org/t/esp32s-hiletgo-dev-boad-with-pinout-template/5357)  
