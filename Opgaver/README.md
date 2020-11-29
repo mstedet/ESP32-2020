@@ -19,6 +19,53 @@
 * [ Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
   * [Installing Home Assistant OS (Hassio) on Raspberry Pi and Quick Lovelace Tour/Overview](https://www.youtube.com/watch?v=SHg6fa0x7OA)
 
+# ESPHome - Default
+## Config data for oprettelse af configurationsfil
+```
+Device Name: [Inttialer]_[ProjectNavn]_[Version]
+Device Type: Espressif ESP32 Dev Module
+WiFi SSID: "HUAWEI-ESP32"
+WiFi Password: "12345678"
+Access Password: ""
+```
+## !secrets fil /config/esphome/secrecs.yaml
+```
+My_WiFi_SSID: "HUAWEI-ESP32"
+My_WiFi_Pass: "12345678"
+My_Access_Pass: "qazwsxedc"
+My_AP_Pass: "qwertyuiop"
+My_API_Pass: "asdfghjkl"
+My_OTA_Pass: "zxcvbnm"
+```
+## Kode / Configurationsfil /config/esphome/[Inttialer]_[ProjectNavn]_[Version]/
+```
+esphome:
+  name: [Inttialer]_[ProjectNavn]_[Version]
+  platform: ESP32
+  board: esp32dev
+
+wifi:
+  ssid: !secret My_WiFi_SSID
+  password: !secret My_WiFi_Pass
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "[Inttialer]_[ProjectNavn]_[Version]_FallBack"
+    password: !secret My_AP_Pass
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret My_API_Pass
+
+ota:
+  password: !secret My_OTA_Pass
+```
+
 # ESP 32 Pin Layout :
 ![ESP32 PinLayout](/Images/ESP32S-HiLetgo_1377x724.png)  
 [ESP32S-HiLetgo Dev Boad with Pinout Template](https://forum.fritzing.org/t/esp32s-hiletgo-dev-boad-with-pinout-template/5357)  
