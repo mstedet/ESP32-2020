@@ -22,7 +22,7 @@
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
 ```
-Device Name: [Inttialer]_[ProjectNavn]_[Version]
+Device Name: <Inttialer>_<ProjectNavn>_<Version>
 Device Type: Espressif ESP32 Dev Module
 WiFi SSID: "HUAWEI-ESP32"
 WiFi Password: "12345678"
@@ -37,10 +37,10 @@ My_AP_Pass: "qwertyuiop"
 My_API_Pass: "asdfghjkl"
 My_OTA_Pass: "zxcvbnm"
 ```
-## Kode / Configurationsfil /config/esphome/[Inttialer]_[ProjectNavn]_[Version]/
+## Default-Configurationsfil /config/esphome/<Inttialer>_<ProjectNavn>_<Version>/
 ```
 esphome:
-  name: [Inttialer]_[ProjectNavn]_[Version]
+  name: <Inttialer>_<ProjectNavn>_<Version>
   platform: ESP32
   board: esp32dev
 
