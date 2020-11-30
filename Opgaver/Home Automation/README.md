@@ -1,4 +1,4 @@
-# Opgave HomeAutomation_01
+# Opgave-01 HomeAutomation
 ## ESPHome Create New Node:
 * Opret nu et ESPHOME Node med dette indhold, hvor XXXX skal erstattes med dine initialer.
 
@@ -95,31 +95,32 @@ XXXX_WiFi_Pass: "zzzzzzzz"
 ```
 
 ## ESP32 Benforbindelser:
-| Name  | Type | GPIO | True GPIO Controller | Denne Node |
-| ---   | ---  | ---  | -----                | -----      |
-| IO00 | I/O | GPIO00 | No |    |
-| TXD0 | I/O | GPIO01 | No |    |
-| IO02 | I/O | GPIO02 | No |    |
-| RXD0 | I/O | GPIO03 | No |    |
-| IO04 | I/O | GPIO04 |  | XXXX_auto_Relay 1 |
-| IO05 | I/O | GPIO05 |  | XXXX_auto_Relay 2 |
-| IO12 | I/O | GPIO12 | No |    |
-| IO13 | I/O | GPIO13 |  | XXXX_auto_Relay 3 |
-| IO14 | I/O | GPIO14 |  | XXXX_auto_Relay 4 |
-| IO15 | I/O | GPIO15 |  |    |
-| IO16 | I/O | GPIO16 | Not available on WROVER |    |
-| IO17 | I/O | GPIO17 | Not available on WROVER |    |
-| IO18 | I/O | GPIO18 |  |    |
-| IO19 | I/O | GPIO19 |  |    |
-| IO21 | I/O | GPIO21 |  |    |
-| IO22 | I/O | GPIO22 |  |    |
-| IO23 | I/O | GPIO23 |  |    |
-| IO25 | I/O | GPIO25 |  | XXXX_auto_Red LED |
-| IO26 | I/O | GPIO26 |  | XXXX_auto_Green LED |
-| IO27 | I/O | GPIO27 |  |    |
-| IO32 | I/O | GPIO32 |  | XXXX_auto_pir_01 |
-| IO33 | I/O | GPIO33 |  | XXXX_auto_frontdoor |
-| IO34 | I | GPIO34 | No |    |
-| IO35 | I | GPIO35 | No |    |
-| SENSOR_VP | I | GPIO36 | No |   |  
-| SENSOR_VN | I | GPIO39 | No |    |
+| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
+| ---  | ---    | -----                   | ----      | -----               |
+| I/O  | GPIO00 | No                      |           |                     |
+| I/O  | GPIO01 | No                      | TX0       |                     |
+| I/O  | GPIO02 | No                      |           |                     |
+| I/O  | GPIO03 | No                      | RX0       |                     |
+| I/O  | GPIO04 |                         |           |                     |
+| I/O  | GPIO05 |                         | VSPI SS   |                     |
+| I/O  | GPIO12 | No                      |           |                     |
+| I/O  | GPIO13 |                         |           |                     |
+| I/O  | GPIO14 |                         |           | XXXX_auto_Relay 1   |
+| I/O  | GPIO15 |                         |           | XXXX_auto_Relay 2   |
+| I/O  | GPIO16 | Not available on WROVER | RX2       | XXXX_auto_Relay 3   |
+| I/O  | GPIO17 | Not available on WROVER | TX2       | XXXX_auto_Relay 4   |
+| I/O  | GPIO18 |                         | VSPI SCK  |                     |
+| I/O  | GPIO19 |                         | VSPI MISO |                     |
+| I/O  | GPIO21 |                         | I2C SDA   |                     |
+| I/O  | GPIO22 |                         | I2C SCL   |                     |
+| I/O  | GPIO23 |                         | VSPI MOSI |                     |
+| I/O  | GPIO25 |                         |           | XXXX_auto_Red LED   |
+| I/O  | GPIO26 |                         |           | XXXX_auto_Green LED |
+| I/O  | GPIO27 |                         |           |                     |
+| I/O  | GPIO32 |                         |           | XXXX_auto_pir_01    |
+| I/O  | GPIO33 |                         |           | XXXX_auto_frontdoor |
+| I    | GPIO34 | No                      |           |                     |
+| I    | GPIO35 | No                      |           |                     |
+| I    | GPIO36 | No                      | SENSOR_VP |                     |
+| I    | GPIO39 | No                      | SENSOR_VN |                     |
+
