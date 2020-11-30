@@ -12,8 +12,13 @@
 * [Smart Home Junkie](https://www.youtube.com/c/smarthomejunkie/playlists)
   * [How to set up Automations in Home Assistant tutorial](https://www.youtube.com/watch?v=KXTs5_x_T5c)
   * [Create a professional alarm system in Home Assistant. This is how!](https://www.youtube.com/watch?v=JPSDAszlII4&list=PLKuGrHcHLKMjYTsVN8IAKPLE21MbqkISO)
+* [KPeyanski](https://www.youtube.com/channel/UCiyU6otsAn6v2NbbtM85npg)
+  * [Home Assistant Android Companion App | SENSORS & NOTIFICATIONS](https://www.youtube.com/watch?v=pTa-SCWXMSQ&t=436s)
 
 ### Home Automation - Lovelace
+* [Zack Barett](https://www.youtube.com/channel/UCXpteV7qpsWi9uUkOeLAhaA)
+  * [Beginner's Guide on the Lovelace Dashboard Editor](https://www.youtube.com/watch?v=21dAWsKUimc)
+  * [Everything Home Assistant Frontend](https://www.youtube.com/watch?v=8E3A90Xv7vA&list=PLs3GdbE8i1fRElfRyuaIRkyOsuBqYWrBA)
 * [Home Sight](https://www.youtube.com/channel/UCT4bjO68FpyOsVoQAe45MGQ)
   * [Home Assistant how to create a Lovelace 3D floorplan with light overlays and buttons - Pt1](https://www.youtube.com/watch?v=xGIH6MlbRn0)
 * [ Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
