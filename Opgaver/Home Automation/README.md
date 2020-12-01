@@ -57,25 +57,25 @@ text_sensor:
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO4
+      number: GPIO32
       mode: INPUT_PULLUP
       inverted: True
     name: "XXXX_auto_pir_01"
   - platform: gpio
     pin:
-      number: GPIO0
+      number: GPIO33
       mode: INPUT_PULLUP
       inverted: True
     name: "XXXX_auto_frontdoor"
 
 switch:
 - platform: gpio
-    pin: GPIO14
+    pin: GPIO25
     name: "XXXX_auto_Red LED"
     inverted: true
     id: XXXX_auto_RedLed
   - platform: gpio
-    pin: GPIO12
+    pin: GPIO26
     name: "XXXX_auto_Green LED"
     inverted: true
     id: XXXX_auto_GreenLed
