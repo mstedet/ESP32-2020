@@ -75,6 +75,46 @@ ota:
 ![ESP32 PinLayout](/Images/ESP32S-HiLetgo_1377x724.png)  
 [ESP32S-HiLetgo Dev Boad with Pinout Template](https://forum.fritzing.org/t/esp32s-hiletgo-dev-boad-with-pinout-template/5357)  
 
+# ESP32 Priority One Pins:
+| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
+| ---  | ---    | -----                   | ----      | -----               |
+| I/O  | GPIO04 |                         |           |                     |
+| I/O  | GPIO05 |                         |           |                     | 
+| I/O  | GPIO16 |                         |           |                     |
+| I/O  | GPIO17 |                         |           |                     |
+| I/O  | GPIO18 |                         |           |                     |
+| I/O  | GPIO19 |                         |           |                     |
+| I/O  | GPIO23 |                         |           |                     |
+| I/O  | GPIO25 |                         |           | XXXX_auto_Red LED   |
+| I/O  | GPIO26 |                         |           | XXXX_auto_Green LED |
+| I/O  | GPIO27 |                         |           |                     |
+| I/O  | GPIO32 |                         |           | XXXX_auto_pir_01    |
+| I/O  | GPIO33 |                         |           | XXXX_auto_frontdoor |
+
+# ESP32 I2C Bus
+| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
+| ---  | ---    | -----                   | ----      | -----               |
+| I/O  | GPIO21 |                         | I2C SDA   |                     |
+| I/O  | GPIO22 |                         | I2C SCL   |                     |
+|      |        |                         |           |                     |
+
+# ESP32 VSPI Bus
+| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
+| ---  | ---    | -----                   | ----      | -----               |
+| I/O  | GPIO23 |                         | VSPI MOSI |                     |
+| I/O  | GPIO19 |                         | VSPI MISO |                     |
+| I/O  | GPIO18 |                         | VSPI CLK  |                     |
+| I/O  | GPIO05 |                         | VSPI CS   |                     |
+
+# ESP32 HSPI Bus
+| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
+| ---  | ---    | -----                   | ----      | -----               |
+| I/O  | GPIO13 |                         | HSPI MOSI |                     |
+| I/O  | GPIO12 |                         | HSPI MISO |                     |
+| I/O  | GPIO14 |                         | HSPI CLK  |                     |
+| I/O  | GPIO15 |                         | HSPI CS   |                     |
+
+
 # ESP32 Benforbindelser:
 | Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
 | ---  | ---    | -----                   | ----      | -----               |
@@ -83,11 +123,11 @@ ota:
 | I/O  | GPIO02 | No                      |           |                     |
 | I/O  | GPIO03 | No                      | RX0       |                     |
 | I/O  | GPIO04 |                         |           |                     |
-| I/O  | GPIO05 |                         | VSPI SS   |                     |
-| I/O  | GPIO12 | No                      |           |                     |
-| I/O  | GPIO13 |                         |           |                     |
-| I/O  | GPIO14 |                         |           | XXXX_auto_Relay 1   |
-| I/O  | GPIO15 |                         |           | XXXX_auto_Relay 2   |
+| I/O  | GPIO05 |                         | VSPI CS   |                     |
+| I/O  | GPIO12 | No                      | HSPI MISO |                     |
+| I/O  | GPIO13 |                         | HSPI MOSI |                     |
+| I/O  | GPIO14 |                         | HSPI CLK  | XXXX_auto_Relay 1   |
+| I/O  | GPIO15 | No log when low         | HSPI CS   | XXXX_auto_Relay 2   |
 | I/O  | GPIO16 | Not available on WROVER | RX2       | XXXX_auto_Relay 3   |
 | I/O  | GPIO17 | Not available on WROVER | TX2       | XXXX_auto_Relay 4   |
 | I/O  | GPIO18 |                         | VSPI SCK  |                     |
