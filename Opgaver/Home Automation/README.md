@@ -66,7 +66,7 @@
 | Enhed          | sekt_auto        |
 | Handling       | Sluk sekt_auto_Red LED |
 
-## Ændre to Udløsertypen fra Enhed til Tilstand
+## Ændre af Udløsertypen fra Enhed til Tilstand
 * Før
 ### Udløsere:
 |  Felt:       | Indhold:                    |
