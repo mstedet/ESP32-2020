@@ -66,3 +66,25 @@
 | Enhed          | sekt_auto        |
 | Handling       | Sluk sekt_auto_Red LED |
 
+## Ændre to Udløsertypen fra Enhed til Tilstand
+* Før
+### Udløsere:
+|  Felt:       | Indhold:                    |
+| -----        | -------                     |
+| Udløsertype  | Enhed                       |
+| Enhed        | sekt_auto                   |
+| Udløser      | sekt_auto_pir_01 tændte     |
+| Varihed      | 00:00:02                    |
+
+* efter
+### Udløsere:
+|  Felt:       | Indhold:                       |
+| -----        | -------                        |
+| Udløsertype  | Tilstand                       |
+| Entitet      | binary_sensor.sekt_auto_pir_01 |
+| Attribute    |                                |
+| Fra          | off                            |
+| Til          | on                             |
+| Varihed      | 00:00:02                       |
+
+
