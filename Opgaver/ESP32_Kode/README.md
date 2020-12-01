@@ -1,6 +1,6 @@
 # Opgave ESP32 kode for Home Automation 
 ## Diagram  
-![ESP32-Kontakt](/Opgaver/ESP32_Kode/Images/ESP32-Kontakt_bb.png) 
+![ESP32-Kontakt](/Opgaver/ESP32_Kode/Images/ESP32-Kontakt_Relay_bb.png) 
 
 ## ESPHome Opret ny ESP32_Node:
 * Opret nu et ESPHOME Node med dette indhold, hvor XXXX skal erstattes med dine initialer.
