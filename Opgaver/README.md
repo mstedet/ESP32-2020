@@ -76,74 +76,73 @@ ota:
 [ESP32S-HiLetgo Dev Boad with Pinout Template](https://forum.fritzing.org/t/esp32s-hiletgo-dev-boad-with-pinout-template/5357)  
 
 # ESP32 Priority One Pins:
-| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
-| ---  | ---    | -----                   | ----      | -----               |
-| I/O  | GPIO04 |                         |           |                     |
-| I/O  | GPIO05 |                         |           |                     | 
-| I/O  | GPIO16 |                         |           |                     |
-| I/O  | GPIO17 |                         |           |                     |
-| I/O  | GPIO18 |                         |           |                     |
-| I/O  | GPIO19 |                         |           |                     |
-| I/O  | GPIO23 |                         |           |                     |
-| I/O  | GPIO25 |                         |           | XXXX_auto_Red LED   |
-| I/O  | GPIO26 |                         |           | XXXX_auto_Green LED |
-| I/O  | GPIO27 |                         |           |                     |
-| I/O  | GPIO32 |                         |           | XXXX_auto_pir_01    |
-| I/O  | GPIO33 |                         |           | XXXX_auto_frontdoor |
+| Type | GPIO   | Resaveret | Denne Node          |
+| ---  | ---    | ----      | -----               |
+| I/O  | GPIO04 |           |                     |
+| I/O  | GPIO05 |           |                     | 
+| I/O  | GPIO16 |           |                     |
+| I/O  | GPIO17 |           |                     |
+| I/O  | GPIO18 |           |                     |
+| I/O  | GPIO19 |           |                     |
+| I/O  | GPIO23 |           |                     |
+| I/O  | GPIO25 |           | XXXX_auto_Red LED   |
+| I/O  | GPIO26 |           | XXXX_auto_Green LED |
+| I/O  | GPIO27 |           |                     |
+| I/O  | GPIO32 |           | XXXX_auto_pir_01    |
+| I/O  | GPIO33 |           | XXXX_auto_frontdoor |
 
 # ESP32 I2C Bus
-| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
-| ---  | ---    | -----                   | ----      | -----               |
-| I/O  | GPIO21 |                         | I2C SDA   |                     |
-| I/O  | GPIO22 |                         | I2C SCL   |                     |
-|      |        |                         |           |                     |
+| Type | GPIO   | Resaveret | 
+| ---  | ---    | ----      | 
+| I/O  | GPIO21 | I2C SDA   | 
+| I/O  | GPIO22 | I2C SCL   | 
 
 # ESP32 VSPI Bus
-| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
-| ---  | ---    | -----                   | ----      | -----               |
-| I/O  | GPIO23 |                         | VSPI MOSI |                     |
-| I/O  | GPIO19 |                         | VSPI MISO |                     |
-| I/O  | GPIO18 |                         | VSPI CLK  |                     |
-| I/O  | GPIO05 |                         | VSPI CS   |                     |
+| Type | GPIO   | Resaveret | 
+| ---  | ---    | ----      | 
+| I/O  | GPIO23 | VSPI MOSI | 
+| I/O  | GPIO19 | VSPI MISO | 
+| I/O  | GPIO18 | VSPI CLK  | 
+| I/O  | GPIO05 | VSPI CS   | 
 
 # ESP32 HSPI Bus
-| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
-| ---  | ---    | -----                   | ----      | -----               |
-| I/O  | GPIO13 |                         | HSPI MOSI |                     |
-| I/O  | GPIO12 |                         | HSPI MISO |                     |
-| I/O  | GPIO14 |                         | HSPI CLK  |                     |
-| I/O  | GPIO15 |                         | HSPI CS   |                     |
+| Type | GPIO   | Resaveret |
+| ---  | ---    | ----      |
+| I/O  | GPIO13 | HSPI MOSI |
+| I/O  | GPIO12 | HSPI MISO |
+| I/O  | GPIO14 | HSPI CLK  |
+| I/O  | GPIO15 | HSPI CS   |
 
 
 # ESP32 Benforbindelser:
-| Type | GPIO   | True GPIO Controller    | Resaveret | Denne Node          |
-| ---  | ---    | -----                   | ----      | -----               |
-| I/O  | GPIO00 | No                      |           |                     |
-| I/O  | GPIO01 | No                      | TX0       |                     |
-| I/O  | GPIO02 | No                      |           |                     |
-| I/O  | GPIO03 | No                      | RX0       |                     |
-| I/O  | GPIO04 |                         |           |                     |
-| I/O  | GPIO05 |                         | VSPI CS   |                     |
-| I/O  | GPIO12 | No                      | HSPI MISO |                     |
-| I/O  | GPIO13 |                         | HSPI MOSI |                     |
-| I/O  | GPIO14 |                         | HSPI CLK  | XXXX_auto_Relay 1   |
-| I/O  | GPIO15 | No log when low         | HSPI CS   | XXXX_auto_Relay 2   |
-| I/O  | GPIO16 | Not available on WROVER | RX2       | XXXX_auto_Relay 3   |
-| I/O  | GPIO17 | Not available on WROVER | TX2       | XXXX_auto_Relay 4   |
-| I/O  | GPIO18 |                         | VSPI SCK  |                     |
-| I/O  | GPIO19 |                         | VSPI MISO |                     |
-| I/O  | GPIO21 |                         | I2C SDA   |                     |
-| I/O  | GPIO22 |                         | I2C SCL   |                     |
-| I/O  | GPIO23 |                         | VSPI MOSI |                     |
-| I/O  | GPIO25 |                         |           | XXXX_auto_Red LED   |
-| I/O  | GPIO26 |                         |           | XXXX_auto_Green LED |
-| I/O  | GPIO27 |                         |           |                     |
-| I/O  | GPIO32 |                         |           | XXXX_auto_pir_01    |
-| I/O  | GPIO33 |                         |           | XXXX_auto_frontdoor |
-| I    | GPIO34 | No                      |           |                     |
-| I    | GPIO35 | No                      |           |                     |
-| I    | GPIO36 | No                      | SENSOR_VP |                     |
-| I    | GPIO39 | No                      | SENSOR_VN |                     |
+| Type | GPIO   | True GPIO Controller    | Resaveret | 
+| ---  | ---    | -----                   | ----      | 
+| I/O  | GPIO00 | No                      |           | 
+| I/O  | GPIO01 | No                      | TX0       | 
+| I/O  | GPIO02 | No                      |           | 
+| I/O  | GPIO03 | No                      | RX0       | 
+| I/O  | GPIO04 |                         |           | 
+| I/O  | GPIO05 |                         | VSPI CS   | 
+| I/O  | GPIO12 | No                      | HSPI MISO | 
+| I/O  | GPIO13 |                         | HSPI MOSI | 
+| I/O  | GPIO14 |                         | HSPI CLK  | 
+| I/O  | GPIO15 | No log when low         | HSPI CS   | 
+| I/O  | GPIO16 | Not available on WROVER | RX2       | 
+| I/O  | GPIO17 | Not available on WROVER | TX2       | 
+| I/O  | GPIO18 |                         | VSPI SCK  | 
+| I/O  | GPIO19 |                         | VSPI MISO | 
+| I/O  | GPIO21 |                         | I2C SDA   | 
+| I/O  | GPIO22 |                         | I2C SCL   | 
+| I/O  | GPIO23 |                         | VSPI MOSI | 
+| I/O  | GPIO25 |                         |           | 
+| I/O  | GPIO26 |                         |           | 
+| I/O  | GPIO27 |                         |           | 
+| I/O  | GPIO32 |                         |           | 
+| I/O  | GPIO33 |                         |           | 
+| I    | GPIO34 | No                      |           | 
+| I    | GPIO35 | No                      |           | 
+| I    | GPIO36 | No                      | SENSOR_VP | 
+| I    | GPIO39 | No                      | SENSOR_VN | 
 
 # PCB Layout - TopView:
 ![PCB Images](/Fritzing/ESP32_PCB_A_002_b_bb.png)
