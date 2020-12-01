@@ -78,10 +78,10 @@ ota:
 # ESP32 Priority One Pins:
 | Type | GPIO   | Resaveret | Denne Node          |
 | ---  | ---    | ----      | -----               |
-| I/O  | GPIO04 |           |                     |
-| I/O  | GPIO05 |           |                     | 
-| I/O  | GPIO16 |           |                     |
-| I/O  | GPIO17 |           |                     |
+| I/O  | GPIO04 |           | XXXX_auto_Relay_04  |
+| I/O  | GPIO05 |           | XXXX_auto_Relay_01  | 
+| I/O  | GPIO16 |           | XXXX_auto_Relay_03  |
+| I/O  | GPIO17 |           | XXXX_auto_Relay_02  |
 | I/O  | GPIO18 |           |                     |
 | I/O  | GPIO19 |           |                     |
 | I/O  | GPIO23 |           |                     |
