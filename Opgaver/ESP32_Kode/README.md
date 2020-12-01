@@ -1,6 +1,6 @@
 # XXX_auto
 ## Diagram  
-![ESP32-Kontakt](/Opgaver/ESP32-Kontakt/ESP32-Kontakt_bb.png) 
+![ESP32-Kontakt](/Opgaver/ESP32_Kode/Images/ESP32-Kontakt_bb.png) 
 
 ## ESPHome Create New Node:
 * Opret nu et ESPHOME Node med dette indhold, hvor XXXX skal erstattes med dine initialer.
