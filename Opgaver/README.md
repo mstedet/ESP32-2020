@@ -81,11 +81,11 @@ ota:
 | I/O  | GPIO18 |           |                     |
 | I/O  | GPIO19 |           |                     |
 | I/O  | GPIO23 |           |                     |
-| I/O  | GPIO25 |           | XXXX_auto_Red LED   |
-| I/O  | GPIO26 |           | XXXX_auto_Green LED |
+| I/O  | GPIO25 |           | XXXX_auto_pir_01    |
+| I/O  | GPIO26 |           | XXXX_auto_frontdoor |
 | I/O  | GPIO27 |           |                     |
-| I/O  | GPIO32 |           | XXXX_auto_pir_01    |
-| I/O  | GPIO33 |           | XXXX_auto_frontdoor |
+| I/O  | GPIO32 |           | XXXX_auto_Red LED   |
+| I/O  | GPIO33 |           | XXXX_auto_Green LED |
 
 # ESP32 I2C Bus
 | Type | GPIO   | Resaveret | 

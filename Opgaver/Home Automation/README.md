@@ -88,3 +88,59 @@
 | Varihed      | 00:00:02                       |
 
 
+### /config/automations.yaml
+```
+- id: '1606897819547'
+  alias: Tænd rød led
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sekt_auto_pir_01
+    from: 'off'
+    to: 'on'
+    for: 00:00:01
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 5dce63ce6734de8c06febc64d20b4c63
+    entity_id: switch.sekt_auto_green_led
+    domain: switch
+  - condition: and
+    conditions:
+    - condition: sun
+      before: sunset
+  action:
+  - type: turn_on
+    device_id: 5dce63ce6734de8c06febc64d20b4c63
+    entity_id: switch.sekt_auto_red_led
+    domain: switch
+  - type: turn_on
+    device_id: fe6001b910330ef4e622334c99e99551
+    entity_id: switch.bjepp_auto_red_led
+    domain: switch
+  mode: single
+- id: '1606898401191'
+  alias: Sluk rød led efter 5 sec.
+  description: ''
+  trigger:
+  - type: turned_off
+    platform: device
+    device_id: 5dce63ce6734de8c06febc64d20b4c63
+    entity_id: binary_sensor.sekt_auto_pir_01
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 5dce63ce6734de8c06febc64d20b4c63
+    entity_id: switch.sekt_auto_red_led
+    domain: switch
+  - type: turn_off
+    device_id: fe6001b910330ef4e622334c99e99551
+    entity_id: switch.bjepp_auto_red_led
+    domain: switch
+  mode: single
+```

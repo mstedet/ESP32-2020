@@ -1,6 +1,6 @@
 # Opgave ESP32 kode for Home Automation 
 ## Diagram  
-![ESP32-Kontakt](/Opgaver/ESP32_Kode/Images/ESP32-Kontakt_Relay_bb_02.png) 
+![ESP32-Kontakt](/Opgaver/ESP32_Kode/Images/ESP32-Kontakt_Relay_bb.png) 
 
 ## ESPHome Opret ny ESP32_Node:
 * Opret nu et ESPHOME Node med dette indhold, hvor XXXX skal erstattes med dine initialer.
@@ -60,28 +60,50 @@ text_sensor:
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO32
+      number: GPIO25
       mode: INPUT_PULLUP
       inverted: True
     name: "XXXX_auto_pir_01"
   - platform: gpio
     pin:
-      number: GPIO33
+      number: GPIO26
       mode: INPUT_PULLUP
       inverted: True
     name: "XXXX_auto_frontdoor"
 
 switch:
-- platform: gpio
-    pin: GPIO25
-    name: "XXXX_auto_Red LED"
-    inverted: true
-    id: XXXX_auto_RedLed
   - platform: gpio
-    pin: GPIO26
-    name: "XXXX_auto_Green LED"
+    pin: GPIO32
+    name: "sekt_auto_Red LED"
     inverted: true
-    id: XXXX_auto_GreenLed
+    id: sekt_auto_RedLed
+  - platform: gpio
+    pin: GPIO33
+    name: "sekt_auto_Green LED"
+    inverted: true
+    id: sekt_auto_GreenLed
+
+  - platform: gpio
+    pin: GPIO5
+    name: "sekt_auto_Relay_01"
+    inverted: true
+    id: sekt_auto_Relay_01
+  - platform: gpio
+    pin: GPIO17
+    name: "sekt_auto_Relay_02"
+    inverted: true
+    id: sekt_auto_Relay_02
+  - platform: gpio
+    pin: GPIO16
+    name: "sekt_auto_Relay_03"
+    inverted: true
+    id: sekt_auto_Relay_03
+  - platform: gpio
+    pin: GPIO4
+    name: "sekt_auto_Relay_04"
+    inverted: true
+    id: sekt_auto_Relay_04
+
 ```
 ## ESPHome Secrets Editor
 * Open Opret en Secret file med dette indhold, XXXX erstatest med dine Initialer, yyyyyyyy med dit hjemmenetwærks SSID, zzzzzzzz erstattest med dit hjemmenetværks Password
