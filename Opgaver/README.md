@@ -83,7 +83,7 @@ ota:
 | I/O  | GPIO23 |           |                     |
 | I/O  | GPIO25 |           | XXXX_auto_pir_01    |
 | I/O  | GPIO26 |           | XXXX_auto_frontdoor |
-| I/O  | GPIO27 |           |                     |
+| I/O  | GPIO27 |           | XXXX_DS18B20 (Data) |
 | I/O  | GPIO32 |           | XXXX_auto_Red LED   |
 | I/O  | GPIO33 |           | XXXX_auto_Green LED |
 
