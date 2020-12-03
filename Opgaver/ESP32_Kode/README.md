@@ -74,35 +74,35 @@ binary_sensor:
 switch:
   - platform: gpio
     pin: GPIO32
-    name: "sekt_auto_Red LED"
+    name: "XXXX_auto_Red LED"
     inverted: true
-    id: sekt_auto_RedLed
+    id: XXXX_auto_RedLed
   - platform: gpio
     pin: GPIO33
-    name: "sekt_auto_Green LED"
+    name: "XXXX_auto_Green LED"
     inverted: true
-    id: sekt_auto_GreenLed
+    id: XXXX_auto_GreenLed
 
   - platform: gpio
     pin: GPIO5
-    name: "sekt_auto_Relay_01"
+    name: "XXXX_auto_Relay_01"
     inverted: true
-    id: sekt_auto_Relay_01
+    id: XXXX_auto_Relay_01
   - platform: gpio
     pin: GPIO17
-    name: "sekt_auto_Relay_02"
+    name: "XXXX_auto_Relay_02"
     inverted: true
-    id: sekt_auto_Relay_02
+    id: XXXX_auto_Relay_02
   - platform: gpio
     pin: GPIO16
-    name: "sekt_auto_Relay_03"
+    name: "XXXX_auto_Relay_03"
     inverted: true
-    id: sekt_auto_Relay_03
+    id: XXXX_auto_Relay_03
   - platform: gpio
     pin: GPIO4
-    name: "sekt_auto_Relay_04"
+    name: "XXXX_auto_Relay_04"
     inverted: true
-    id: sekt_auto_Relay_04
+    id: XXXX_auto_Relay_04
 
 ```
 ## ESPHome Secrets Editor
