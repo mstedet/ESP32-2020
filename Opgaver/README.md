@@ -19,6 +19,9 @@
   * [Home Assistant how to create a Lovelace 3D floorplan with light overlays and buttons - Pt1](https://www.youtube.com/watch?v=xGIH6MlbRn0)
 * [ Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
   * [Installing Home Assistant OS (Hassio) on Raspberry Pi and Quick Lovelace Tour/Overview](https://www.youtube.com/watch?v=SHg6fa0x7OA)
+### Home Automation - Nextion Display
+* [Vaclav Chaloupka](https://www.youtube.com/channel/UCA5DCnztFFHgdEettFHZ2Kw)
+  * [DIY displays for Home Assistant](https://www.youtube.com/watch?v=_u1sOCfyghY)
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
