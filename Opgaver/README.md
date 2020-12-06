@@ -10,6 +10,8 @@
   * [Create a professional alarm system in Home Assistant. This is how!](https://www.youtube.com/watch?v=JPSDAszlII4&list=PLKuGrHcHLKMjYTsVN8IAKPLE21MbqkISO)
 * [KPeyanski](https://www.youtube.com/channel/UCiyU6otsAn6v2NbbtM85npg)
   * [Home Assistant Android Companion App | SENSORS & NOTIFICATIONS](https://www.youtube.com/watch?v=pTa-SCWXMSQ&t=436s)
+* [BeardedTinker](https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g)
+  * [Home Assistant How To - track Threshold and use with sensors](https://www.youtube.com/watch?v=49Nv1HqYhqQ)
 
 ### Home Automation - Lovelace
 * [Zack Barett](https://www.youtube.com/channel/UCXpteV7qpsWi9uUkOeLAhaA)
