@@ -25,11 +25,17 @@
 * [Vaclav Chaloupka](https://www.youtube.com/channel/UCA5DCnztFFHgdEettFHZ2Kw)
   * [DIY displays for Home Assistant](https://www.youtube.com/watch?v=_u1sOCfyghY)
 ### Home Automation - RFID
+#### PN522
 * [DrZzs](https://www.youtube.com/channel/UC7G4tLa4Kt6A9e3hJ-HO8ng)
-  * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant (PN522)](https://www.youtube.com/watch?v=ENMul9eAB00)
+  * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant](https://www.youtube.com/watch?v=ENMul9eAB00)
   * [esprfid/esp-rfid](https://github.com/esprfid/esp-rfid)
-* [PN532 NFC/RFID](https://esphome.io/components/binary_sensor/pn532.html)
-
+#### PN532
+* [ESPHome](https://esphome.io/)
+  * [PN532 NFC/RFID](https://esphome.io/components/binary_sensor/pn532.html)
+* [BeardedTinker](https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g)
+  * [Home Assistant How To - make NFC Tag Reader with PN532 & ESPHome](https://www.youtube.com/watch?v=YqwRppUsFIQ)
+  * [PN532 NFC RFID module V3](https://arduinotech.dk/shop/pn532-nfc-rfid-module-v3/)
+  * [ PN532 NFC/RFID-controller, Adafruit](https://www.elfadistrelec.dk/da/pn532-nfc-rfid-controller-adafruit-364/p/30129234)
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
