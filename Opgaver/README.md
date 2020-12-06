@@ -24,6 +24,12 @@
 ### Home Automation - Nextion Display
 * [Vaclav Chaloupka](https://www.youtube.com/channel/UCA5DCnztFFHgdEettFHZ2Kw)
   * [DIY displays for Home Assistant](https://www.youtube.com/watch?v=_u1sOCfyghY)
+### Home Automation - RFID
+* [DrZzs](https://www.youtube.com/channel/UC7G4tLa4Kt6A9e3hJ-HO8ng)
+  * [ID Card Scanner using NodeMCU, MFRC-522, esp-rfid firmware, and of course, Home Assistant (PN522)](https://www.youtube.com/watch?v=ENMul9eAB00)
+  * [esprfid/esp-rfid](https://github.com/esprfid/esp-rfid)
+* [PN532 NFC/RFID](https://esphome.io/components/binary_sensor/pn532.html)
+
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
