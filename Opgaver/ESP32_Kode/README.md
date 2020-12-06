@@ -36,7 +36,17 @@ api:
 ota:
   password: !secret My_OTA_Pass
 
+dallas:
+  - pin: GPIO23
+
 sensor:
+  - platform: dallas
+    address: 0x64000006B629FD28
+    resolution: 12
+    accuracy_decimals: 2
+    name: "SEKT_auto_Room_Temperature"
+    id: SEKT_auto_Temperature
+
   - platform: wifi_signal
     name: "XXXX_auto WiFi signal"
     update_interval: 60s
