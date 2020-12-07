@@ -36,6 +36,9 @@
   * [Home Assistant How To - make NFC Tag Reader with PN532 & ESPHome](https://www.youtube.com/watch?v=YqwRppUsFIQ)
   * [PN532 NFC RFID module V3](https://arduinotech.dk/shop/pn532-nfc-rfid-module-v3/)
   * [ PN532 NFC/RFID-controller, Adafruit](https://www.elfadistrelec.dk/da/pn532-nfc-rfid-controller-adafruit-364/p/30129234)
+### Home Automation - Push messages and notification 
+* [BeardedTinker](https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g)
+  * [Home Assistant How To - Push messages and notification to Telegram](https://www.youtube.com/watch?v=qskqdjUZcRY)
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
