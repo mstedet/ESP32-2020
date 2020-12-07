@@ -40,7 +40,7 @@
 * [BeardedTinker](https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g)
   * [Home Assistant How To - Push messages and notification to Telegram](https://www.youtube.com/watch?v=qskqdjUZcRY)
 *  [Tobias Karge](https://www.youtube.com/channel/UCEUOShgy0beMxZl6OR6PJiA)
-  *  [Telegram Nachricht mit Home Assistant (deutsch)](https://www.youtube.com/watch?v=_XI2HxTQgUQ)
+   *  [Telegram Nachricht mit Home Assistant (deutsch)](https://www.youtube.com/watch?v=_XI2HxTQgUQ)
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
