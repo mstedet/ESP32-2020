@@ -39,6 +39,8 @@
 ### Home Automation - Push messages and notification 
 * [Average Automation](https://www.youtube.com/channel/UCMR_eJdL5P6SVJ2n0kTCjlg)
   * [Home Assistant Telegram notification setup guide](https://www.youtube.com/watch?v=sHdWirJ2v8M)
+* [sihle ndlovu](https://www.youtube.com/channel/UCYkpAlLi9j69KvdRcGOJWbA)
+  * [How to retrieve your Telegram Group Chat ID](https://www.youtube.com/watch?v=Mjx4OruxTwM)
 * [BeardedTinker](https://www.youtube.com/channel/UCuqokNoK8ZFNQdXxvlE129g)
   * [Home Assistant How To - Push messages and notification to Telegram](https://www.youtube.com/watch?v=qskqdjUZcRY)
 *  [Tobias Karge](https://www.youtube.com/channel/UCEUOShgy0beMxZl6OR6PJiA)
