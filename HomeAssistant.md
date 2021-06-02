@@ -1,6 +1,86 @@
-# Video og vejledninger om HomeAssistant 123
+# Vejledninger til HomeAssistant 2021
+
+## Home Assistant Raspberry Pi 4 SSD Installation and Migration
+* [Everything Smart Home](https://www.youtube.com/watch?v=QxtDyMbDOh4)
+### Software til brug for installationen
+* Raspberry Pi Imager
+afinstaller gammel version med komandoen:
+```
+sudo apt remove rpi-imager
+```
+og installer nyeste version med kommandoen
+```
+sudo snap install rpi-imager
+```
+### Klargør din SSD disk for Home Assistant, jeg bruger en JMicron Tech UB til ATA adapter og tilslutter min SSD via USB3 på min PC.
+* CHOOSE OS: --> Other specific purpose OS -->
+  * Select: Home Assistant --> Home Assistant OS 5.13 (RPI4/400)
+* CHOOSE STORAGE: -->> JMicron Tech 
+* WRITE: --> YES
+
+### Klargør SD-Kort til at sætte Rasperry PI til Boote fra USD-Drev, jeg bruger et 8.0GB SD-Kort
+* CHOOSE OS: --> Misc utility Images --> 
+  * Select: Bootloader --> USB Boot
+* CHOOSE STORAGE: -->> Generic STORAGE_DEVICE - 8.0GB
+* WRITE: --> YES
 
 
+## Add-on Store
+* File editor
+* ESPHome
+* Samba share
+  * Configuration Options
+```
+workgroup: WORKGROUP
+username: sekt1953
+password: XQMyQ#2A.52Y
+interface: ''
+allow_hosts:
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - fe80::/10
+veto_files:
+  - ._*
+  - .DS_Store
+  - Thumbs.db
+  - icon?
+  - .Trashes
+compatibility_mode: false
+
+```
+* Home Assistant MariaDB Install and System Monitoring
+  * Video fra [Everything Smart Home](https://www.youtube.com/watch?v=FbFyqQ3He7M)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Video og vejledninger om HomeAssistant 
 ## Se videoerne læs teksterne før du går igang med installation 
 jeg har valg disse videoer og vejledninger fordi de viseer os en måde at bruge vores ESP32 i hvores hjem. 
 * [By Juan](https://www.juanmtech.com/)
