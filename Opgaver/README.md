@@ -45,6 +45,9 @@
   * [Home Assistant How To - Push messages and notification to Telegram](https://www.youtube.com/watch?v=qskqdjUZcRY)
 *  [Tobias Karge](https://www.youtube.com/channel/UCEUOShgy0beMxZl6OR6PJiA)
    *  [Telegram Nachricht mit Home Assistant (deutsch)](https://www.youtube.com/watch?v=_XI2HxTQgUQ)
+* [bujarra](www.bujarra.com)
+  * [Sending alerts Telegram with the Home Assistant Hassio](https://www.bujarra.com/enviando-alertas-de-telegram-con-home-assistant-o-hassio/?lang=en)
+  * [Telegram enabling notifications in Centreon](https://www.bujarra.com/habilitando-notificaciones-de-telegram-en-centreon/?lang=en)
 
 # ESPHome - Default
 ## Config data for oprettelse af configurationsfil
