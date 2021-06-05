@@ -79,7 +79,6 @@ rights:
 * HACS
   * [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
 
-
 ```
 /config/custom_components
 ```
