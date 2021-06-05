@@ -24,9 +24,19 @@ sudo snap install rpi-imager
 * CHOOSE STORAGE: -->> Generic STORAGE_DEVICE - 8.0GB
 * WRITE: --> YES
 
-
 ## Add-on Store
 * File editor
+```
+dirsfirst: false
+enforce_basepath: true
+git: true
+ignore_pattern:
+  - __pycache__
+  - .cloud
+  - .storage
+  - deps
+ssh_keys: []
+``` 
 * ESPHome
 * Samba share
   * Configuration Options
@@ -49,16 +59,30 @@ veto_files:
 compatibility_mode: false
 
 ```
-* Home Assistant MariaDB Install and System Monitoring
-  * Video fra [Everything Smart Home](https://www.youtube.com/watch?v=FbFyqQ3He7M)
+* MariaDB 
+  * Home Assistant MariaDB Install and System Monitoring
+    * [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) af Everything Smart Home
+```
+databases:
+  - homeassistant
+logins:
+  - username: homeassistant
+    password: z8wvgwg3thwhqnfc
+rights:
+  - username: homeassistant
+    database: homeassistant
+```
+
+* SSH
+  * [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
+
+* HACS
+  * [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
 
 
-
-
-
-
-
-
+```
+/config/custom_components
+```
 
 
 
