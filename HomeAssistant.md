@@ -72,7 +72,32 @@ rights:
   - username: homeassistant
     database: homeassistant
 ```
-
+  * configuration.yaml
+```
+# Home Assistant MariaDB Install and System Monitoring https://www.youtube.com/watch?v=FbFyqQ3He7M
+recorder:
+  db_url: !secret mysql
+#  db_url: mysql://homeassistant:z8wvgwg3thwhqnfc@core-mariadb/homeassistant?charset=utf8mb4
+```
+* System Monitoring
+```
+# Sensor
+sensor:
+    # Home Assistant MariaDB Install and System Monitoring https://www.youtube.com/watch?v=FbFyqQ3He7M
+  - platform: systemmonitor
+    resources:
+      - type: processor_use
+      - type: processor_temperature
+      - type: memory_free
+      - type: disk_use_percent
+        arg: /
+      - type: disk_use
+      - type: disk_free
+      - type: throughput_network_in
+        arg: eth0
+      - type: throughput_network_out
+        arg: eth0
+```
 * SSH
   * [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
 
