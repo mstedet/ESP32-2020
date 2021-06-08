@@ -1,10 +1,17 @@
 # Vejledninger til HomeAssistant 2021
 
-## Home Assistant Raspberry Pi 4 SSD Installation and Migration
-* [Everything Smart Home](https://www.youtube.com/watch?v=QxtDyMbDOh4)
+## Home Assistant Raspberry Pi 4 SSD Installation
+* start med at se denne video [Home Assistant Raspberry Pi 4 SSD Installation and Migration](https://www.youtube.com/watch?v=QxtDyMbDOh4) fra Everything Smart Home
+### Hardware ibrug i denne installation
+* 1 Raspberry Pi 4 Model B 4GB
+* 1 stk SSD Disk Kingston 240GB
+* 1 stk SATA til USB3 Controler DELTACO USB3-SATA6G3
+* 1 stk SD-Kort 8GB
+## Arbejdsplads
+* 1 stk PC med Ubuntu 18.04 eller nyere
 ### Software til brug for installationen
-* Raspberry Pi Imager
-afinstaller gammel version med komandoen:
+* Raspberry Pi Imager  v1.6.2 eller nyere
+  * har du en tidligere versionafinstaller gammel version med komandoen:
 ```
 sudo apt remove rpi-imager
 ```
@@ -24,8 +31,15 @@ sudo snap install rpi-imager
 * CHOOSE STORAGE: -->> Generic STORAGE_DEVICE - 8.0GB
 * WRITE: --> YES
 
-## Add-on Store
+# HomeAssistant på din Raspberry Pi 4
+## Fra Add-on Store installerer vi nu følgende programmer 
 * File editor
+* Samba share
+* ESPHome
+* SSH
+* MariaDB 
+* HACS
+### File editor
 ```
 dirsfirst: false
 enforce_basepath: true
@@ -37,8 +51,9 @@ ignore_pattern:
   - deps
 ssh_keys: []
 ``` 
-* ESPHome
-* Samba share
+### ESPHome
+
+### Samba share
   * Configuration Options
 ```
 workgroup: WORKGROUP
@@ -59,9 +74,9 @@ veto_files:
 compatibility_mode: false
 
 ```
-* MariaDB 
-  * Home Assistant MariaDB Install and System Monitoring
-    * [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) af Everything Smart Home
+### MariaDB 
+* Home Assistant MariaDB Install and System Monitoring
+  * [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) af Everything Smart Home
 ```
 databases:
   - homeassistant
@@ -79,7 +94,8 @@ recorder:
   db_url: !secret mysql
 #  db_url: mysql://homeassistant:z8wvgwg3thwhqnfc@core-mariadb/homeassistant?charset=utf8mb4
 ```
-* System Monitoring
+#### System Monitoring
+  * System Monitoring /config/configuration.yaml
 ```
 # Sensor
 sensor:
@@ -98,7 +114,7 @@ sensor:
       - type: throughput_network_out
         arg: eth0
 ```
-  * Lovelace
+  * System Monitoring Lovelace
 ```
 type: grid
 cards:
@@ -143,11 +159,11 @@ cards:
 columns: 1
 square: false
 ```
-* SSH
-  * [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
+### SSH
+* [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
 
-* HACS
-  * [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
+### HACS
+* [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
 
 ```
 /config/custom_components
