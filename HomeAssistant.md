@@ -1,15 +1,16 @@
 # Vejledninger til HomeAssistant 2021
 
 ## Home Assistant Raspberry Pi 4 SSD Installation
-* start med at se denne video [Home Assistant Raspberry Pi 4 SSD Installation and Migration](https://www.youtube.com/watch?v=QxtDyMbDOh4) fra Everything Smart Home
+* Start med at se denne video [Home Assistant Raspberry Pi 4 SSD Installation and Migration](https://www.youtube.com/watch?v=QxtDyMbDOh4) fra [Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
 ### Hardware ibrug i denne installation
 * 1 Raspberry Pi 4 Model B 4GB
 * 1 stk SSD Disk Kingston 240GB
 * 1 stk SATA til USB3 Controler DELTACO USB3-SATA6G3
 * 1 stk SD-Kort 8GB
-## Arbejdsplads
+## Min Arbejdsplads
 * 1 stk PC med Ubuntu 18.04 eller nyere
 ### Software til brug for installationen
+* link til [Secure Password Generator](https://passwordsgenerator.net/)
 * Raspberry Pi Imager  v1.6.2 eller nyere
   * har du en tidligere versionafinstaller gammel version med komandoen:
 ```
@@ -38,10 +39,20 @@ sudo snap install rpi-imager
 * ESPHome
 * SSH
 * MariaDB 
-* HACS
-### File editor
+* HACS [Home Assistant Community Store](https://hacs.xyz/)
+* AppDaemon 4 [Welcome to AppDaemon’s documentation!](https://appdaemon.readthedocs.io/en/latest/)
+
+## Option som gælder for de fleste add-on, som jeg normalt aktiverer
+* Start on boot: Make the add-on start during a system boot
+* Watchdog: This will start the add-on if it crashes
+* Auto update: Auto update the add-on when there is a new version available
+* Show in sidebar: Add this add-on to your sidebar 
+
+## File editor Configuration:
+* Option: dirsfirst (required): This option allows you to list directories before files in the file browser tree. Set it to true to list directories first, false otherwise.
+* Option: enforce_basepath (required): If set to true, access is limited to files within the /config directory.
 ```
-dirsfirst: false
+dirsfirst: true
 enforce_basepath: true
 git: true
 ignore_pattern:
@@ -51,14 +62,19 @@ ignore_pattern:
   - deps
 ssh_keys: []
 ``` 
-### ESPHome
 
-### Samba share
-  * Configuration Options
+## ESPHome
+* ingen bemærkninger
+
+## Samba share Configuration
+* Option: workgroup (required): Change WORKGROUP to reflect your network needs.
+* Option: username (required): The username you would like to use to authenticate with the Samba server.
+* Option: password (required): The password that goes with the username configured for authentication.
+* Option: allow_hosts (required): List of hosts/networks allowed to access the shared folders.
 ```
 workgroup: WORKGROUP
-username: sekt1953
-password: XQMyQ#2A.52Y
+username: izoehhuzhaqefrhx
+password: Gjq9e7UepXn6RJna
 interface: ''
 allow_hosts:
   - 10.0.0.0/8
@@ -72,11 +88,22 @@ veto_files:
   - icon?
   - .Trashes
 compatibility_mode: false
-
 ```
-### MariaDB 
-* Home Assistant MariaDB Install and System Monitoring
-  * [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) af Everything Smart Home
+### Åben Samba share fra Arbejdsplads PC's stifinder
+* Vælg Andre steder --> Forbind til server -->
+* Udfyld felt: smb://izoehhuzhaqefrhx@homeassistant.local/config --> Klik Tilslut -->
+* indtast password når du bliver spurgt
+  
+## MariaDB 
+* Start med at se denne video [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) fra [Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
+### Configuration
+* Option: databases (required):Database name, e.g., homeassistant. Multiple are allowed.
+* Option: logins (required): This section defines a create user definition in MariaDB. Create User documentation.
+  * Option: logins.username (required): Database user login, e.g., homeassistant. User Name documentation.
+  * Option: logins.password (required): Password for user login. This should be strong and unique.
+* Option: rights (required):This section grant privileges to users in MariaDB. Grant documentation.
+  * Option: rights.username (required):This should be the same user name defined in logins -> username.
+  * Option: rights.database (required): This should be the same database defined in databases.
 ```
 databases:
   - homeassistant
@@ -87,14 +114,19 @@ rights:
   - username: homeassistant
     database: homeassistant
 ```
-  * configuration.yaml
+* /config/configuration.yaml
 ```
 # Home Assistant MariaDB Install and System Monitoring https://www.youtube.com/watch?v=FbFyqQ3He7M
 recorder:
-  db_url: !secret mysql
-#  db_url: mysql://homeassistant:z8wvgwg3thwhqnfc@core-mariadb/homeassistant?charset=utf8mb4
+  db_url: !secret maria_db
 ```
-#### System Monitoring
+* /config/secrets.yaml
+  * for ikke at have vores password i configuration.yaml, hvor vi nemt kan komme til at dele dem med andre opretter dette entry i /config/secrets.yaml
+```
+# MariaDB
+maria_db: mysql://homeassistant:lsjqg8ha@core-mariadb/homeassistant?charset=utf8mb4
+```
+## System Monitoring
   * System Monitoring /config/configuration.yaml
 ```
 # Sensor
