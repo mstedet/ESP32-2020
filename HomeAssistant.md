@@ -11,6 +11,7 @@
 * 1 stk PC med Ubuntu 18.04 eller nyere
 ### Software til brug for installationen
 * link til [Secure Password Generator](https://passwordsgenerator.net/)
+* hvis du ikke har en Github account skal du oprette en.
 * Raspberry Pi Imager  v1.6.2 eller nyere
   * har du en tidligere versionafinstaller gammel version med komandoen:
 ```
@@ -255,7 +256,11 @@ init_commands:
 ~ wget -q -O - https://install.hacs.xyz | bash - 
 ```   
 2. Restart Homeassistant
-3. 
+3. Ryd browserdata 
+4. Gå nu til Homeassistant Configuration --> Integrations --> ADD INTEGRATION -->
+5. Søg for HACS --> Install
+6. Select alle 4 options --> Submit
+7. 
 ```
 /config/custom_components
 ```
