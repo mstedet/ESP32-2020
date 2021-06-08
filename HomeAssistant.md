@@ -192,7 +192,7 @@ columns: 1
 square: false
 ```
 ## SSH
-* [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
+* Start med at se denne video [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af [Smart Home Junkie](https://www.youtube.com/channel/UCVtQ4AOSmCFUuvixddYiSxw)
 
 * Configuration
 * Option: log_level: The log_level option controls the level of log output by the addon and can be changed to be more or less verbose, which might be useful when you are dealing with an unknown issue. Possible values are:
@@ -206,12 +206,10 @@ square: false
 Using trace or debug log levels puts the SSH and Terminal daemons into debug mode. While SSH is running in debug mode, it will be only able to accept one single connection at the time.
 * Option group ssh: The following options are for the option group: ssh. These settings only apply to the SSH daemon.
   * Option ssh: username: This option allows you to change to username the use when you log in via SSH. It is only utilized for the authentication; you will be the root user after you have authenticated. Using root as the username is possible, but not recommended.  
-  Note: Due to limitations, you will need to set this option to root in order to be able to enable the SFTP capabilities.
   * Option ssh: password: Sets the password to log in with. Leaving it empty would disable the possibility to authenticate with a password. We would highly recommend not to use this option from a security point of view.  
-  Note: The password will be checked against HaveIBeenPwned. If it is listed, the add-on will not start.
+  **Note: The password will be checked against HaveIBeenPwned. If it is listed, the add-on will not start.**
   * Option ssh authorized_keys: Add one or more public keys to your SSH server to use with authentication. This is the recommended over setting a password.  
   Please take a look at the awesome documentation created by GitHub about using public/private key pairs and how to create them.  
-  Note: Please ensure the keys are specified as a list by pasting within the [] comma delimited.
   * Option ssh: sftp: When set to true the addon will enable SFTP support on the SSH daemon. Please only enable it when you plan on using it.  
   Note: Due to limitations, you will need to set the username to root in order to be able to enable the SFTP capabilities.
   * Option ssh: compatibility_mode: This SSH add-on focusses on security and has therefore only enabled known secure encryption methods. However, some older clients do not support these. Setting this option to true will enable the original default set of methods, allowing those clients to connect.   
@@ -250,8 +248,14 @@ init_commands:
 ```
 
 ## HACS
-* [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
+* Start med at se denne video [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E) af [Smart Home Junkie](https://www.youtube.com/channel/UCVtQ4AOSmCFUuvixddYiSxw)
 
+1. Åben ssh terminal og indstat følgende komando:
+```
+~ wget -q -O - https://install.hacs.xyz | bash - 
+```   
+2. Restart Homeassistant
+3. 
 ```
 /config/custom_components
 ```
