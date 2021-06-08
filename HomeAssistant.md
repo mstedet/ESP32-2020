@@ -191,10 +191,65 @@ cards:
 columns: 1
 square: false
 ```
-### SSH
+## SSH
 * [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
 
-### HACS
+* Configuration
+* Option: log_level: The log_level option controls the level of log output by the addon and can be changed to be more or less verbose, which might be useful when you are dealing with an unknown issue. Possible values are:
+  * trace: Show every detail, like all called internal functions.
+  * debug: Shows detailed debug information.
+  * info: Normal (usually) interesting events.
+  * warning: Exceptional occurrences that are not errors.
+  * error: Runtime errors that do not require immediate action.
+  * fatal: Something went terribly wrong. Add-on becomes unusable.
+* Please note that each level automatically includes log messages from a more severe level, e.g., debug also shows info messages. By default, the log_level is set to info, which is the recommended setting unless you are troubleshooting.  
+Using trace or debug log levels puts the SSH and Terminal daemons into debug mode. While SSH is running in debug mode, it will be only able to accept one single connection at the time.
+* Option group ssh: The following options are for the option group: ssh. These settings only apply to the SSH daemon.
+  * Option ssh: username: This option allows you to change to username the use when you log in via SSH. It is only utilized for the authentication; you will be the root user after you have authenticated. Using root as the username is possible, but not recommended.  
+  Note: Due to limitations, you will need to set this option to root in order to be able to enable the SFTP capabilities.
+  * Option ssh: password: Sets the password to log in with. Leaving it empty would disable the possibility to authenticate with a password. We would highly recommend not to use this option from a security point of view.  
+  Note: The password will be checked against HaveIBeenPwned. If it is listed, the add-on will not start.
+  * Option ssh authorized_keys: Add one or more public keys to your SSH server to use with authentication. This is the recommended over setting a password.  
+  Please take a look at the awesome documentation created by GitHub about using public/private key pairs and how to create them.  
+  Note: Please ensure the keys are specified as a list by pasting within the [] comma delimited.
+  * Option ssh: sftp: When set to true the addon will enable SFTP support on the SSH daemon. Please only enable it when you plan on using it.  
+  Note: Due to limitations, you will need to set the username to root in order to be able to enable the SFTP capabilities.
+  * Option ssh: compatibility_mode: This SSH add-on focusses on security and has therefore only enabled known secure encryption methods. However, some older clients do not support these. Setting this option to true will enable the original default set of methods, allowing those clients to connect.   
+  Note: Enabling this option, lowers the security of your SSH server!
+  * Option ssh: allow_agent_forwarding: Specifies whether ssh-agent forwarding is permitted or not.  
+  Note: Enabling this option, lowers the security of your SSH server! Nevertheless, this warning is debatable.
+  * Option ssh: allow_remote_port_forwarding: Specifies whether remote hosts are allowed to connect to ports forwarded for the client.  
+  Note: Enabling this affects all remote forwardings, so think carefully before doing this.
+  * Option ssh: allow_tcp_forwarding: Specifies whether TCP forwarding is permitted or not. 
+  Note: Enabling this option, lowers the security of your SSH server! Nevertheless, this warning is debatable.
+* Shared settings : The following options are shared between both the SSH and the Web Terminal.
+  * Option: zsh: The add-on has ZSH pre-installed and configured as the default shell. However, ZSH might not be your preferred choice. By setting this option to false, you will disable ZSH and the add-on will fallback to Bash instead.
+  * Option: share_sessions: By default, the terminal session between the web client and SSH is shared. This allows you to pick up where you left your terminal from either of those. This option allows you to disable this behavior by setting it to false, which effectively sets SSH to behave as it used to be.
+  * Option: packages: Allows you to specify additional Alpine packages to be installed in your shell environment (e.g., Python, Joe, Irssi).   
+  Note: Adding many packages will result in a longer start-up time for the add-on.
+  * Option: init_commands: Customize your shell environment even more with the init_commands option. Add one or more shell commands to the list, and they will be executed every single time this add-on starts.
+  * Option: i_like_to_be_pwned: Adding this option to the add-on configuration allows to you bypass the HaveIBeenPwned password requirement by setting it to true.
+```
+log_level: info
+ssh:
+  username: homeassistant
+  password: ""
+  authorized_keys:
+    - ssh-rsa AASDJKJKJFWJFAFLCNALCMLAK234234.....
+  sftp: false
+  compatibility_mode: false
+  allow_agent_forwarding: false
+  allow_remote_port_forwarding: false
+  allow_tcp_forwarding: false
+zsh: true
+share_sessions: true
+packages:
+  - build-base
+init_commands:
+  - ls -la
+```
+
+## HACS
 * [How to install HACS in 2021 in Home Assistant - NEW UPDATED VERSION!](https://www.youtube.com/watch?v=D6ZlhE-Iv9E)
 
 ```
