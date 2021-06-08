@@ -98,6 +98,51 @@ sensor:
       - type: throughput_network_out
         arg: eth0
 ```
+  * Lovelace
+```
+type: grid
+cards:
+  - type: glance
+    entities:
+      - entity: sensor.processor_temperature
+      - entity: sensor.processor_use_percent
+      - entity: sensor.memory_free
+    title: Processor sensor
+    state_color: false
+  - type: history-graph
+    entities:
+      - entity: sensor.processor_temperature
+      - entity: sensor.processor_use_percent
+      - entity: sensor.memory_free
+    hours_to_show: 48
+    refresh_interval: 0
+    title: Processor sensor last 48 hour
+columns: 1
+square: false
+```
+```
+type: grid
+cards:
+  - type: entities
+    entities:
+      - entity: sensor.disk_use_percent
+      - entity: sensor.disk_use
+      - entity: sensor.disk_free
+    title: Disk
+  - type: entities
+    entities:
+      - entity: sensor.network_throughput_in_eth0
+      - entity: sensor.network_throughput_out_eth0
+    title: Network trafic last 48 hour
+  - type: history-graph
+    entities:
+      - entity: sensor.network_throughput_in_eth0
+      - entity: sensor.network_throughput_out_eth0
+    hours_to_show: 24
+    refresh_interval: 0
+columns: 1
+square: false
+```
 * SSH
   * [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af Smart Home Junkie
 
