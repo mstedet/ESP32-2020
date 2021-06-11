@@ -7,6 +7,7 @@
 * 1 stk SSD Disk Kingston 240GB
 * 1 stk SATA til USB3 Controler DELTACO USB3-SATA6G3
 * 1 stk SD-Kort 8GB
+* 1 stk ZigBee CC2531 USB dongle
 ## Min Arbejdsplads
 * 1 stk PC med Ubuntu 18.04 eller nyere
 ### Software til brug for installationen
@@ -41,6 +42,10 @@ sudo snap install rpi-imager
 * SSH
 * MariaDB 
 * HACS [Home Assistant Community Store](https://hacs.xyz/)
+* ZigBee
+* Telegram
+* MQTT
+* NodeRed
 * AppDaemon 4 [Welcome to AppDaemon’s documentation!](https://appdaemon.readthedocs.io/en/latest/)
 
 ## Option som gælder for de fleste add-on, som jeg normalt aktiverer
