@@ -70,7 +70,9 @@ ssh_keys: []
 ``` 
 
 ## ESPHome
-* ingen bemærkninger
+* Nyhere 20210616 [Power up your ESP-based projects](https://www.youtube.com/watch?v=du38Oir_xp8)
+  * We're launching new tools to make it easier for new users to start with any projects running on the ESP8266 and ESP32. [Blog version:](https://www.home-assistant.io/blog/2021/06/16/power-up-your-esp-projects/)
+
 
 ## Samba share Configuration
 * Option: workgroup (required): Change WORKGROUP to reflect your network needs.
@@ -269,3 +271,12 @@ init_commands:
 ```
 /config/custom_components
 ```
+# Configuration.yaml
+## secrets.yaml
+## automations.yaml
+## groups.yaml
+## lights.yaml
+## scenes.yaml
+## scripts.yaml
+
+# [Splitting up the configuration](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
