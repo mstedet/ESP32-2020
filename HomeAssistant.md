@@ -280,3 +280,13 @@ init_commands:
 ## scripts.yaml
 
 # [Splitting up the configuration](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
+
+## Zigbee
+Her er nogke videoer:
+
+* 20201028 [How-to ZigBee in Home Assistant](https://www.youtube.com/watch?v=2Nn0u4ACsx0)
+* 20201115 [IKEA Zigbee remotes - upgrading CC2531 firmware](https://www.youtube.com/watch?v=n8Qfyfkvt14&t=27s)
+
+
+## Telegram
+' Average Automation 20200429 [Home Assistant Telegram notification setup guide.](https://www.youtube.com/watch?v=sHdWirJ2v8M&t=71s)
