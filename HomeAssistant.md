@@ -324,7 +324,7 @@ Se videoen fra Average Automation [Home Assistant Telegram notification setup gu
 
 ### Configuration:
 Her er en eksemple installation, brug oplysningerne fra dit skema og tilpas til dine behov.:  
-config/configuration.yaml
+**config/configuration.yaml**
 ```
 # Example configuration.yaml entry for the Telegram Bot
 telegram_bot:
@@ -348,8 +348,8 @@ notify:
     chat_id: CHAT_ID_2
 
 ```
-tilføj nu en linie idin secret.yaml fil og brug din egen token (api_key)
-config/secrets.yaml
+tilføj nu en linie idin secret.yaml fil og brug din egen token (api_key):  
+**config/secrets.yaml**
 ```
 ha-sekt_token: 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
 ```
