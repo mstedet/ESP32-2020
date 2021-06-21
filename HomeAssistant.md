@@ -271,15 +271,6 @@ init_commands:
 ```
 /config/custom_components
 ```
-# Configuration.yaml
-## secrets.yaml
-## automations.yaml
-## groups.yaml
-## lights.yaml
-## scenes.yaml
-## scripts.yaml
-
-# [Splitting up the configuration](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
 
 ## Zigbee
 Her er nogke videoer:
@@ -290,3 +281,85 @@ Her er nogke videoer:
 
 ## Telegram
 ' Average Automation 20200429 [Home Assistant Telegram notification setup guide.](https://www.youtube.com/watch?v=sHdWirJ2v8M&t=71s)
+* [Hame Assistant Telegram manual: ](https://www.home-assistant.io/integrations/telegram)
+* [Telegram Bot Manual: ](https://core.telegram.org/bots#6-botfather)
+
+### Huskeliste for ny bot:
+
+1. The **name** of your bot is displayed in contact details and elsewhere.
+2. The **Username** is a short name, to be used in mentions and t.me links. Usernames are 5-32 characters long and are case insensitive, but may only include Latin characters, numbers, and underscores. Your bot's username must end in 'bot', e.g. 'tetris_bot' or 'TetrisBot'.
+3. The **token** (api_key) is a string along the lines of 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw that is required to authorize the bot and send requests to the Bot API. Keep your token secure and store it safely, it can be used by anyone to control your bot.
+
+4. Print denne huske liste og udfyld den inden du starter:
+
+* BOT
+   * name: 
+   * Username:
+   * token (api_key)
+
+* NOTIFIER_NAME:
+  * User 1:
+    * username:
+    * Chat_ID:
+  * User 2:
+    * username:
+    * Chat_ID:
+  * User n+1:
+    * username:
+    * Chat_ID:
+
+* NOTIFIER_NAME_OF_GROUP
+  * Group 1:
+    * beskrivelse:
+    * groupname:
+    * Chat_ID:
+  * Group 2:
+    * beskrivelse:
+    * groupname:
+    * Chat_ID:
+  * Group n+1:
+    * beskrivelse:
+    * groupname:
+    * Chat_ID:
+
+### Configuration:
+Her er en eksemple installation, brug oplysningerne fra dit skema og tilpas til dine behov.:  
+config/configuration.yaml
+```
+# Example configuration.yaml entry for the Telegram Bot
+telegram_bot:
+  - platform: polling
+    api_key: !secret ha-sekt_token
+    allowed_chat_ids:
+      - CHAT_ID_1 # example: 123456789 for the chat_id of a user
+      - CHAT_ID_2 # example: -987654321 for the chat_id of a group
+      - CHAT_ID_3
+
+# Example configuration.yaml entry for the notifier
+notify:
+  - platform: telegram
+    name: NOTIFIER_NAME
+    chat_id: CHAT_ID_1
+
+  # It is possible to add multiple notifiers by using another chat_id
+  # the example belows shows an additional notifier which sends messages to the bot which is added to a group
+  - platform: telegram
+    name: NOTIFIER_NAME_OF_GROUP
+    chat_id: CHAT_ID_2
+
+```
+tilføj nu en linie idin secret.yaml fil og brug din egen token (api_key)
+config/secrets.yaml
+```
+ha-sekt_token: 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
+```
+
+# [Opdeling af konfigurationen](https://www.home-assistant.io/docs/configuration/splitting_configuration/)
+
+* Configuration.yaml
+  * secrets.yaml
+  * automations.yaml
+  * groups.yaml
+  * lights.yaml
+  * scenes.yaml
+  * scripts.yaml
