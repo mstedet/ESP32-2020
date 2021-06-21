@@ -281,7 +281,7 @@ Her er nogke videoer:
 
 ## Telegram
 ' Average Automation 20200429 [Home Assistant Telegram notification setup guide.](https://www.youtube.com/watch?v=sHdWirJ2v8M&t=71s)
-* [Hame Assistant Telegram manual: ](https://www.home-assistant.io/integrations/telegram)
+* [Home Assistant Telegram manual: ](https://www.home-assistant.io/integrations/telegram)
 * [Telegram Bot Manual: ](https://core.telegram.org/bots#6-botfather)
 
 ### Huskeliste for ny bot:
