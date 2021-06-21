@@ -293,30 +293,30 @@ Se videoen fra Average Automation [Home Assistant Telegram notification setup gu
 4. Print denne huske liste og udfyld den inden du starter:
 
 * BOT
-   * name: 
-   * Username:
-   * token (api_key)
+   * name: HaSekt
+   * Username: HaSekt_bot
+   * token (api_key): 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
 
 * NOTIFIER_NAME:
   * User 1:
-    * username:
-    * Chat_ID:
+    * username: NOTIFIER_sekt
+    * Chat_ID: 123456789
   * User 2:
-    * username:
-    * Chat_ID:
+    * username: NOTIFIER_noo
+    * Chat_ID: 234567890
   * User n+1:
-    * username:
-    * Chat_ID:
+    * username: NOTIFIER_noo
+    * Chat_ID: 345678901
 
 * NOTIFIER_NAME_OF_GROUP
   * Group 1:
-    * beskrivelse:
-    * groupname:
-    * Chat_ID:
+    * beskrivelse:  tyveri alarm gruppe
+    * groupname:    NOTIFIER_GROUP_burglary
+    * Chat_ID:      -987654321
   * Group 2:
-    * beskrivelse:
-    * groupname:
-    * Chat_ID:
+    * beskrivelse:  oversvømmelse alarm gruppe
+    * groupname:    NOTIFIER_GROUP_flood
+    * Chat_ID:      -876543210
   * Group n+1:
     * beskrivelse:
     * groupname:
