@@ -399,6 +399,27 @@ Telegram CallBack
       entity_id: input_boolean.flood_pump_2
   mode: single
 ```
+### Lovelace
+```
+type: grid
+cards:
+  - type: entities
+    entities:
+      - entity: input_boolean.flood_pump_1
+        name: Pump 1.
+        icon: mdi:water-polo
+      - entity: input_boolean.flood_pump_2
+        name: Pump 2.
+        icon: mdi:home-flood
+    title: Flood Pump
+    show_header_toggle: false
+    state_color: true
+  - type: entities
+    entities:
+      - entity: input_number.flood_level
+columns: 1
+square: false
+```
 # [Opdeling af konfigurationen](https://www.home-assistant.io/docs/configuration/splitting_configuration/)
 
 * Configuration.yaml
