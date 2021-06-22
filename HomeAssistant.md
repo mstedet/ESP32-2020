@@ -353,7 +353,52 @@ tilføj nu en linie idin secret.yaml fil og brug din egen token (api_key):
 ```
 ha-sekt_token: 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
 ```
+### Automations
 
+Notify a Telegram User:
+```
+- id: '1624377319773'
+  alias: Notify a Telegram User
+  description: send message to one Telegram user
+  trigger:
+  - platform: numeric_state
+    entity_id: input_number.flood_level
+    above: '40'
+    below: '60'
+  condition:
+  - condition: state
+    entity_id: input_boolean.flood_pump_1
+    state: 'off'
+  action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.flood_pump_1
+  - service: notify.notifier_name
+    data:
+      message: Flood Lever over {{ states('input_number.flood_level') | int }} meter
+      title: Flood Alarm !!!
+      data:
+        inline_keyboard:
+          - Start Pump 2 :/Pump2_on
+  mode: single
+```
+Telegram CallBack
+```
+- id: '1624387172987'
+  alias: Telegram CallBack
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_callback
+    event_data:
+      command: /Pump2_on
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.flood_pump_2
+  mode: single
+```
 # [Opdeling af konfigurationen](https://www.home-assistant.io/docs/configuration/splitting_configuration/)
 
 * Configuration.yaml
