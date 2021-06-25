@@ -277,6 +277,7 @@ Her er nogke videoer:
 
 * 20201028 [How-to ZigBee in Home Assistant](https://www.youtube.com/watch?v=2Nn0u4ACsx0)
 * 20201115 [IKEA Zigbee remotes - upgrading CC2531 firmware](https://www.youtube.com/watch?v=n8Qfyfkvt14&t=27s)
+* [Zigbee Home Automation (ZHA)](https://zigbee.blakadder.com/zha.html)
 
 
 ## Telegram
