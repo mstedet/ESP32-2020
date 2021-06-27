@@ -274,10 +274,10 @@ init_commands:
 
 ## Zigbee
 Her er nogke videoer:
-
 * 20201028 [How-to ZigBee in Home Assistant](https://www.youtube.com/watch?v=2Nn0u4ACsx0)
-* 20201115 [IKEA Zigbee remotes - upgrading CC2531 firmware](https://www.youtube.com/watch?v=n8Qfyfkvt14&t=27s)
+### Zigbee opdatering af firmware
 * [Zigbee Home Automation (ZHA)](https://zigbee.blakadder.com/zha.html)
+* [IKEA Zigbee remotes - upgrading CC2531 firmware](https://www.youtube.com/watch?v=n8Qfyfkvt14&list=PLhvGKnQhU0T0_bioWuwImEsZuLScNKd-i&index=6)
 
 
 ## Telegram
