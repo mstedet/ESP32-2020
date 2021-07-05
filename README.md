@@ -54,7 +54,13 @@ Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant
 * SoftWare:
   * Raspberry Pi OS (32-bit), released: 2021-05-07
   * hassos_rpi4-64-5.5.img.gz
+  * haos_rpi4-64-6.1
+  wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+
 ```
+sudo apt-get install xz-utils
+unxz haos_rpi4-64-6.1.img.xz
+
 sudo apt update && sudo apt full-upgrade
 
 sudo nano /etc/default/rpi-eeprom-update
