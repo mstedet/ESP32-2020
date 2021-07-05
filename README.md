@@ -42,5 +42,13 @@ ESP32 programerings kursus 2020
 ### YAML-filer
 * [YAML | In One Video](https://www.youtube.com/watch?v=cdLNKUoMc6c&t=321s)
 
+
 # Argom One M.2
 Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
+
+```
+wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+
+gzip -d haos_rpi4-64-6.1.img.xz
+```
+
