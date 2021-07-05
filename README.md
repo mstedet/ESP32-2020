@@ -46,7 +46,14 @@ ESP32 programerings kursus 2020
 # Argom One M.2
 Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
 
-## RPi 4b 8GB with SSD boot
+## RPi 4b with M.2 SATA III boot
+* HardWare:
+  * Argon One M.2 V.20
+  * Verbatim, 256GB Vi560 Sata III, M.2 2280 Internal SSD, Part No. 49362
+  * SanDisk Ultra 16GB MicroSD-HC
+* SoftWare:
+  * Raspberry Pi OS (32-bit), released: 2021-05-07
+  * hassos_rpi4-64-5.5.img.gz
 ```
 sudo apt update && sudo apt full-upgrade
 
@@ -70,7 +77,7 @@ gzip -d hassos_rpi4-64-5.5.img.gz
 
 lsblk
 
-dd bs=4M if=hassos_rpi4-64-5.5.img of=/dev/sdb status=progress conv=fsync
+sudo dd bs=4M if=hassos_rpi4-64-5.5.img of=/dev/sda status=progress conv=fsync
 
 ```
 
