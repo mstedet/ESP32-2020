@@ -53,38 +53,35 @@ Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant
   * SanDisk Ultra 16GB MicroSD-HC
 * SoftWare:
   * Raspberry Pi OS (32-bit), released: 2021-05-07
-  * hassos_rpi4-64-5.5.img.gz
   * haos_rpi4-64-6.1
-  wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+  * unxz
 
 ```
-sudo apt-get install xz-utils
-unxz haos_rpi4-64-6.1.img.xz
-
 sudo apt update && sudo apt full-upgrade
+sudo apt-get install xz-utils
 
 sudo nano /etc/default/rpi-eeprom-update
 
-sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-yyyy-mm-dd.bin
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-04-29.bin
 
-sudo rpi-eeprom-update -d -a
+```
+installer haos 6.1:
+```
+wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+
+unxz haos_rpi4-64-6.1.img.xz
 
 sudo raspi-config
 ```
-
 …then Boot options --> Boot Rom Version --> latest -> Ok -->
 when the system asks to “Reset boot ROM to defaults” select No (!!!) to use the latest boot ROM.
 –> Boot Order --> USB Boot --> Ok --> Finish --> Reboot --> Shut down
 ```
-wget https://github.com/home-assistant/operating-system/releases/download/5.5/hassos_rpi4-64-5.5.img.gz
-
-gzip -d hassos_rpi4-64-5.5.img.gz
-
-
 lsblk
 
-sudo dd bs=4M if=hassos_rpi4-64-5.5.img of=/dev/sda status=progress conv=fsync
+sudo dd bs=4M if=haos_rpi4-64-6.1.img of=/dev/sda status=progress conv=fsync
 
+reboot
 ```
 
 ## [Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant](https://github.com/Misiu/argon40)
