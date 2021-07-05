@@ -51,4 +51,5 @@ wget https://github.com/home-assistant/operating-system/releases/download/6.1/ha
 
 gzip -d haos_rpi4-64-6.1.img.xz
 ```
+## [Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant](https://github.com/Misiu/argon40)
 
