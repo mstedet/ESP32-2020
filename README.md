@@ -46,5 +46,33 @@ ESP32 programerings kursus 2020
 # Argom One M.2
 Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
 
+## RPi 4b 8GB with SSD boot
+```
+sudo apt update && sudo apt full-upgrade
+
+sudo nano /etc/default/rpi-eeprom-update
+
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-yyyy-mm-dd.bin
+
+sudo rpi-eeprom-update -d -a
+
+sudo raspi-config
+```
+
+…then Boot options --> Boot Rom Version --> latest -> Ok -->
+when the system asks to “Reset boot ROM to defaults” select No (!!!) to use the latest boot ROM.
+–> Boot Order --> USB Boot --> Ok --> Finish --> Reboot --> Shut down
+```
+wget https://github.com/home-assistant/operating-system/releases/download/5.5/hassos_rpi4-64-5.5.img.gz
+
+gzip -d hassos_rpi4-64-5.5.img.gz
+
+
+lsblk
+
+dd bs=4M if=hassos_rpi4-64-5.5.img of=/dev/sdb status=progress conv=fsync
+
+```
+
 ## [Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant](https://github.com/Misiu/argon40)
 
