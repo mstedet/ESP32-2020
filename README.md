@@ -44,45 +44,65 @@ ESP32 programerings kursus 2020
 
 
 # Argon One M.2 - Home Assistant version: 6.x - Supervised version
-Guide Here : https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
+Source & Inspiration: https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
 
-## RPi 4b with M.2 SATA III boot
+## RPi 4b 4-8 GB Ram with M.2 SATA III boot:
 * HardWare:
   * Argon One M.2 V.20
+  * Raspberry Pi 4, 4-8GB Ram
   * Verbatim, 256GB Vi560 Sata III, M.2 2280 Internal SSD, Part No. 49362
   * SanDisk Ultra 16GB MicroSD-HC
+  * some kind of monitor with HDMI connectors maybe a TV for installation
 * SoftWare:
   * Raspberry Pi OS (32-bit), released: 2021-05-07
-  * haos_rpi4-64-6.1
+  * pieeprom-2021-04-29.bin
+  * haos_rpi4-64-6.1 eller nyere
   * unxz
-
+## Boot with Raspberry Pi OS (32-bit) from SD-Card:
+* disconnect the built-in M.2-SATA
+* boot from SD-Card 16GB with Raspberry Pi OS (32-bit), released: 2021-05-07
+## Install Update:
 ```
 sudo apt update && sudo apt full-upgrade
 sudo apt-get install xz-utils
-
+```
+## Update RPi Firmware, Latest for now "pieeprom-2021-04-29.bin":
+```
 sudo nano /etc/default/rpi-eeprom-update
 
 sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-04-29.bin
-
 ```
-installer haos 6.1:
+## Install Home Assistant OS Release 6 - (haos_rpi4):
+* Connect the built-in M.2-SATA !!!
+  * Home Assistant OS Release kan be found here: https://github.com/home-assistant/operating-system
 ```
 wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
 
 unxz haos_rpi4-64-6.1.img.xz
-
+```
+## Set boot options
+```
 sudo raspi-config
 ```
-…then Boot options --> Boot Rom Version --> latest -> Ok -->
-when the system asks to “Reset boot ROM to defaults” select No (!!!) to use the latest boot ROM.
-–> Boot Order --> USB Boot --> Ok --> Finish --> Reboot --> Shut down
+* …then Boot options --> Boot Rom Version --> latest -> Ok -->
+  * when the system asks to “Reset boot ROM to defaults” select No (!!!) to use the latest boot ROM.
+* –> Boot Order --> USB Boot --> Ok --> Finish --> Reboot --> Shut down
+
+## List block devices and dd - convert and copy a file:
 ```
 lsblk
-
+```
+* i expect M.2 SATA named /dev/sda
+```
 sudo dd bs=4M if=haos_rpi4-64-6.1.img of=/dev/sda status=progress conv=fsync
-
+```
+## Reboot 
+* If all went well it will boot Home Assistant fron SSD:
+  * It will take abot 5-10 min before you can get conection to http://homeassistant.local:8123
+```
 reboot
 ```
 
-## [Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant](https://github.com/Misiu/argon40)
+## Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant
 
+Source & Inspiration: https://github.com/Misiu/argon40
