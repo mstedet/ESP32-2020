@@ -74,7 +74,8 @@ sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieepro
 ```
 ## Install Home Assistant OS Release 6 - (haos_rpi4):
 * Connect the built-in M.2-SATA !!!
-  * Home Assistant OS Release kan be found here: https://github.com/home-assistant/operating-system
+  * Home Assistant OS Release kan be found here:  
+  https://github.com/home-assistant/operating-system/releases/
 ```
 wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
 
