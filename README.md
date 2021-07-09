@@ -43,7 +43,7 @@ ESP32 programerings kursus 2020
 * [YAML | In One Video](https://www.youtube.com/watch?v=cdLNKUoMc6c&t=321s)
 
 
-# Argon One M.2 - Home Assistant version: 6.x - Supervised version
+# Argon One M.2 - Home Assistant OS: 6.x & Supervised version
 Source & Inspiration: https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
 
 ## RPi 4b 4-8 GB Ram with M.2 SATA III boot:
