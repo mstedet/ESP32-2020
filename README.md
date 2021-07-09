@@ -107,3 +107,6 @@ reboot
 ## Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant
 
 Source & Inspiration: https://github.com/Misiu/argon40
+### I2C
+* [ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL](https://www.home-assistant.io/common-tasks/os#enable-i2c-via-home-assistant-operating-system-terminal)
+* [HassOS I2C Configurator](https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167)
