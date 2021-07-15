@@ -311,9 +311,8 @@ init_commands:
   - ls -la  
 ```
 ## Misiu/argon40:
-### Configuration:
-follow this link: https://github.com/Misiu/argon40
-
+### Misiu way of installing 
+* follow this link: https://github.com/Misiu/argon40
 ### Automations script for Argon40:
 #### Part of my configuration.yaml:
 the sensor I used for getting temperature data
@@ -412,4 +411,29 @@ action:
     data:
       speed: '{{ states(''input_number.cpu_fan_speed'') | int }}'
 mode: single
+```
+### Lovelace Fan_Speed:
+```
+type: grid
+cards:
+  - type: entities
+    entities:
+      - entity: sensor.processor_temperature
+      - entity: input_number.cpu_fan_speed
+columns: 1
+square: false
+```
+Lovelace Fan_Speed Temperature & Speed Graph:
+```
+type: grid
+cards:
+  - type: history-graph
+    entities:
+      - entity: sensor.processor_temperature
+      - entity: input_number.cpu_fan_speed
+    hours_to_show: 3
+    refresh_interval: 0
+    title: Processor sensor last 3 hour
+columns: 1
+square: false
 ```
