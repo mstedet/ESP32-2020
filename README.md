@@ -44,7 +44,7 @@ ESP32 programerings kursus 2020
 
 
 # Argon One M.2 - Home Assistant OS: 6.x & Supervised version
-Source & Inspiration: https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
+Inspiration: https://community.home-assistant.io/t/raspberry-pi-4-home-assistant-os-5-5-dev-version-on-a-ssd-and-the-argon-one-m-2-case-in-progress/248025
 
 ## RPi 4b 4-8 GB Ram with M.2 SATA III boot:
 * HardWare:
@@ -72,16 +72,10 @@ sudo nano /etc/default/rpi-eeprom-update
 
 sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-04-29.bin
 ```
-## Install Home Assistant OS Release 6 - (haos_rpi4):
-* Connect the built-in M.2-SATA !!!
-  * Home Assistant OS Release kan be found here:  
-  https://github.com/home-assistant/operating-system/releases/
-```
-wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
-
-unxz haos_rpi4-64-6.1.img.xz
-```
 ## Set boot options
+* Connect the built-in M.2-SATA !!!
+  * using the litle usd connector
+* Run Raspberry config
 ```
 sudo raspi-config
 ```
@@ -89,22 +83,30 @@ sudo raspi-config
   * when the system asks to “Reset boot ROM to defaults” select No (!!!) to use the latest boot ROM.
 * –> Boot Order --> USB Boot --> Ok --> Finish --> Reboot --> Shut down
 
+## Install Home Assistant OS Release 6 - (haos_rpi4):
+  * Home Assistant OS Release kan be found here:  
+  https://github.com/home-assistant/operating-system/releases/
+```
+wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+
+unxz haos_rpi4-64-6.1.img.xz
+```
 ## List block devices and dd - convert and copy a file:
 ```
 lsblk
 ```
-* i expect M.2 SATA named /dev/sda
+* i expect M.2 SATA named **/dev/sda**
 ```
 sudo dd bs=4M if=haos_rpi4-64-6.1.img of=/dev/sda status=progress conv=fsync
 ```
 ## Reboot 
 * If all went well it will boot Home Assistant fron SSD:
-  * It will take abot 5-10 min before you can get conection to http://homeassistant.local:8123
+  * It will take abot 5-10 min before you can get conection to **http://homeassistant.local:8123**
 ```
 reboot
 ```
 ## ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL 
-I what to enable i2c to bee able to controll fan speed i the Argon40 
+I what to enable i2c to bee able to controll fan speed i the Argon40 and react to the push button on the backside of Argon40
 ### inspiration: 
 * [ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL](https://www.home-assistant.io/common-tasks/os#enable-i2c-via-home-assistant-operating-system-terminal)
 * [Argon40Tech/Argon-ONE-i2c-Codes](https://github.com/Argon40Tech/Argon-ONE-i2c-Codes)
@@ -139,3 +141,102 @@ sync
 reboot
 ```
 
+## Automations script for Argon40:
+### Part of my configuration.yaml
+the sensor I used for getting temperature data
+```
+sensor:
+    # Home Assistant MariaDB Install and System Monitoring https://www.youtube.com/watch?v=FbFyqQ3He7M
+  - platform: systemmonitor
+    resources:
+      - type: processor_temperature
+```
+### Helper in use
+used as variable to store FanSpeed in, and to to display FanSpeed in Lovelace
+* Cpu_Fan_Speed
+  * Name: Cpu_Fan_Speed
+  * Icon: mdi:fan
+  * Minimum value: 0
+  * Maximum value: 100
+  * Display mode: Input field
+  * Display mode: 1
+  * Entity ID: input_number.cpu_fan_speed
+### Automation - Fan_Speed_Setting
+```
+alias: Fan_Speed_Setting
+description: ''
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.processor_temperature
+    for: '00:00:03'
+    below: '30.1'
+  - platform: numeric_state
+    entity_id: sensor.processor_temperature
+    above: '30.0'
+    below: '40.1'
+    for: '00:00:03'
+  - platform: numeric_state
+    entity_id: sensor.processor_temperature
+    above: '40.0'
+    below: '50.1'
+    for: '00:00:03'
+  - platform: numeric_state
+    entity_id: sensor.processor_temperature
+    above: '50.0'
+    for: '00:00:03'
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.processor_temperature
+            below: '30.1'
+        sequence:
+          - service: input_number.set_value
+            target:
+              entity_id: input_number.cpu_fan_speed
+            data:
+              value: 0
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.processor_temperature
+            above: '30.0'
+            below: '40.1'
+        sequence:
+          - service: input_number.set_value
+            target:
+              entity_id: input_number.cpu_fan_speed
+            data:
+              value: 10
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.processor_temperature
+            above: '40.0'
+            below: '50.1'
+        sequence:
+          - service: input_number.set_value
+            target:
+              entity_id: input_number.cpu_fan_speed
+            data:
+              value: 50
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.processor_temperature
+            above: '50.0'
+        sequence:
+          - service: input_number.set_value
+            target:
+              entity_id: input_number.cpu_fan_speed
+            data:
+              value: 100
+    default:
+      - service: input_number.set_value
+        target:
+          entity_id: input_number.cpu_fan_speed
+        data:
+          value: 55
+  - service: argon40.set_fan_speed
+    data:
+      speed: '{{ states(''input_number.cpu_fan_speed'') | int }}'
+mode: single
+```
