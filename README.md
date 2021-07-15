@@ -291,24 +291,25 @@ square: false
 * Start med at se denne video [Enable SSH In Home Assistant - TUTORIAL 2021](https://www.youtube.com/watch?v=_ANmn9QSLtA) af [Smart Home Junkie](https://www.youtube.com/channel/UCVtQ4AOSmCFUuvixddYiSxw)
 
 ### Configuration
-log_level: info
-ssh:
-  username: homeassistant
-  password: ""
-  authorized_keys:
-    - ssh-rsa AASDJKJKJFWJFAFLCNALCMLAK234234.....
-  sftp: false
-  compatibility_mode: false
-  allow_agent_forwarding: false
-  allow_remote_port_forwarding: false
-  allow_tcp_forwarding: false
-zsh: true
-share_sessions: true
-packages:
-  - build-base
-init_commands:
-  - ls -la
-
+```
+log_level: info  
+ssh:  
+  username: homeassistant  
+  password: ""  
+  authorized_keys:  
+    - ssh-rsa AASDJKJKJFWJFAFLCNALCMLAK234234.....  
+  sftp: false  
+  compatibility_mode: false  
+  allow_agent_forwarding: false  
+  allow_remote_port_forwarding: false  
+  allow_tcp_forwarding: false  
+zsh: true  
+share_sessions: true  
+packages:  
+  - build-base  
+init_commands:  
+  - ls -la  
+```
 ## Misiu/argon40:
 ### Configuration:
 follow this link: https://github.com/Misiu/argon40
