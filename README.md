@@ -338,6 +338,8 @@ I used the helper "Cpu_Fan_Speed" to store FanSpeed in, and to to display FanSpe
 alias: Fan_Speed_Setting
 description: ''
 trigger:
+  - platform: homeassistant
+    event: start
   - platform: numeric_state
     entity_id: sensor.processor_temperature
     for: '00:00:03'
