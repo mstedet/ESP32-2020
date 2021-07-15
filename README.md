@@ -103,10 +103,39 @@ sudo dd bs=4M if=haos_rpi4-64-6.1.img of=/dev/sda status=progress conv=fsync
 ```
 reboot
 ```
-
-## Argon ONE Pi 3 & 4 Cases and Fan HAT support for Home Assistant
-
-Source & Inspiration: https://github.com/Misiu/argon40
-### I2C
+## ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL 
+I what to enable i2c to bee able to controll fan speed i the Argon40 
+### inspiration: 
 * [ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL](https://www.home-assistant.io/common-tasks/os#enable-i2c-via-home-assistant-operating-system-terminal)
-* [HassOS I2C Configurator](https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167)
+* [Argon40Tech/Argon-ONE-i2c-Codes](https://github.com/Argon40Tech/Argon-ONE-i2c-Codes)
+* [Misiu/argon40](https://github.com/Misiu/argon40)
+* * [HassOS I2C Configurator](https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167)
+
+You can enable i2c via this Raspberry Pi Console:
+
+* Login as root.
+  * Type login and press enter to access the shell.
+* Type the following to enable i2c, you may need to replace sda1 with sdb1 or mmcblk0p1 depending on your platform:
+```
+mkdir /tmp/mnt
+mount /dev/sda1 /tmp/mnt
+mkdir -p /tmp/mnt/CONFIG/modules
+echo -ne i2c-dev>/tmp/mnt/CONFIG/modules/rpi-i2c.conf
+vi /tmp/mnt/config.txt
+```
+find the line in config.txt
+```
+#dtparam=i2c_arm=on
+```
+and change it to this
+```
+dtparam=i2c_arm=on
+```
+Save and exit vi with thise command:  
+[ESC]:w  
+[ESC]:x
+```
+sync
+reboot
+```
+
