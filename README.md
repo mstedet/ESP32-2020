@@ -313,11 +313,8 @@ init_commands:
 ### Configuration:
 follow this link: https://github.com/Misiu/argon40
 
-
-
-
-## Automations script for Argon40:
-### Part of my configuration.yaml:
+### Automations script for Argon40:
+#### Part of my configuration.yaml:
 the sensor I used for getting temperature data
 ```
 sensor:
@@ -326,7 +323,7 @@ sensor:
     resources:
       - type: processor_temperature
 ```
-### Helper in use:
+#### Helper in use:
 I used the helper "Cpu_Fan_Speed" to store FanSpeed in, and to to display FanSpeed in Lovelace.
 * Cpu_Fan_Speed
   * Name: Cpu_Fan_Speed
@@ -336,7 +333,7 @@ I used the helper "Cpu_Fan_Speed" to store FanSpeed in, and to to display FanSpe
   * Display mode: Input field
   * Display mode: 1
   * Entity ID: input_number.cpu_fan_speed
-### Automation - Fan_Speed_Setting:
+#### Automation - Fan_Speed_Setting:
 ```
 alias: Fan_Speed_Setting
 description: ''
