@@ -53,7 +53,7 @@ ESP32 programerings kursus 2020
 * Raspberry Pi 4, 4-8GB Ram
 * Verbatim, 256GB Vi560 Sata III, M.2 2280 Internal SSD, Part No. 49362
 * SanDisk Ultra 16GB MicroSD-HC
-* some kind of monitor with HDMI connectors maybe a TV for installation
+* Some kind of monitor with HDMI connectors maybe a TV & a keyboard only for installation 
 ### SoftWare:
 * Raspberry Pi OS (32-bit), released: 2021-05-07
 * pieeprom-2021-04-29.bin
@@ -311,6 +311,10 @@ init_commands:
   - ls -la  
 ```
 ## Misiu/argon40:
+## Inspiration: 
+* https://github.com/Misiu/argon40
+* https://github.com/Argon40Tech/Argon-ONE-i2c-Codes
+
 ### Misiu way of installing 
 * follow this link: https://github.com/Misiu/argon40
 ### Automations script for Argon40:
