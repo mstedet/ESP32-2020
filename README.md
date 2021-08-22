@@ -106,7 +106,7 @@ sudo dd bs=4M if=haos_rpi4-64-6.2.img of=/dev/sda status=progress conv=fsync
 ```
 reboot
 ```
-## ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL:
+## ENABLE I2C VIA HOME ASSISTANT SYSTEM TERMINAL:
 I what to enable i2c to bee able to controll fan speed i the Argon40 and react to the push button on the backside of Argon40
 ### inspiration: 
 * [ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL](https://www.home-assistant.io/common-tasks/os#enable-i2c-via-home-assistant-operating-system-terminal)
@@ -142,18 +142,17 @@ Save and exit vi with thise command:
 sync
 reboot
 ```
-## Power Button Support
-* Kilde: https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598/2
-
-Power button double-tap support can be configured entirely through Home Assistant. There is no configuration for single-tap support.  
-### configuration.yaml
+### Check I2C is running
+Make a cold boot and login as root from RPI-Consol
 ```
-binary_sensor:
-  - platform: rpi_gpio
-    ports:
-      4: Argon One Power Button
+login
+ls /dev
 ```
+if you see something like **i2c-1**, your i2c is running.  
 
+## Install Argon One Active Cooling
+Follow the guide on this page:  
+* https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598
 
 # Add on's you will nead on your system:
 ## File editor 
@@ -183,7 +182,7 @@ ssh_keys: []
   * Option: allow_hosts (required): List of hosts/networks allowed to access the shared folders.
 ```
 workgroup: WORKGROUP
-username: homeassistant
+username: sambauser
 password: Gjq9e7UepXn6RJbc
 interface: ''
 allow_hosts:
@@ -201,8 +200,9 @@ compatibility_mode: false
 ```
 ### Access Your Samba share from Linux  
 * Vælg Andre steder --> Forbind til server -->
-* Udfyld felt: smb://homeassistant@homeassistant.local/config --> Klik Tilslut -->
-* indtast password når du bliver spurgt
+* smb://*username*@*servername*.local/config replace *username* & *servername*   
+Enter: smb://sambauser@homeassistant.local/config --> Klik Tilslut -->  
+* indtast password *Gjq9e7UepXn6RJbc* når du bliver spurgt
   
 ## MariaDB 
 * Start med at se denne video [Home Assistant MariaDB Install and System Monitoring](https://www.youtube.com/watch?v=FbFyqQ3He7M) fra [Everything Smart Home](https://www.youtube.com/channel/UCrVLgIniVg6jW38uVqDRIiQ)
@@ -323,137 +323,4 @@ packages:
   - build-base  
 init_commands:  
   - ls -la  
-```
-## Misiu/argon40:
-## Inspiration: 
-* https://github.com/Misiu/argon40
-* https://github.com/Argon40Tech/Argon-ONE-i2c-Codes
-
-### Misiu way of installing 
-* follow this link: https://github.com/Misiu/argon40
-### Automations script for Argon40:
-#### Part of my configuration.yaml:
-the sensor I used for getting temperature data
-```
-sensor:
-    # Home Assistant MariaDB Install and System Monitoring https://www.youtube.com/watch?v=FbFyqQ3He7M
-  - platform: systemmonitor
-    resources:
-      - type: processor_temperature
-```
-#### Helper in use:
-I used the helper "Cpu_Fan_Speed" to store FanSpeed in, and to to display FanSpeed in Lovelace.
-* Cpu_Fan_Speed
-  * Name: Cpu_Fan_Speed
-  * Icon: mdi:fan
-  * Minimum value: 0
-  * Maximum value: 100
-  * Display mode: Input field
-  * Display mode: 1
-  * Entity ID: input_number.cpu_fan_speed
-#### Automation - Fan_Speed_Setting:
-```
-alias: Fan_Speed_Setting
-description: ''
-trigger:
-  - platform: homeassistant
-    event: start
-  - platform: numeric_state
-    entity_id: sensor.processor_temperature
-    for: '00:00:03'
-    below: '30.1'
-  - platform: numeric_state
-    entity_id: sensor.processor_temperature
-    above: '30.0'
-    below: '40.1'
-    for: '00:00:03'
-  - platform: numeric_state
-    entity_id: sensor.processor_temperature
-    above: '40.0'
-    below: '50.1'
-    for: '00:00:03'
-  - platform: numeric_state
-    entity_id: sensor.processor_temperature
-    above: '50.0'
-    for: '00:00:03'
-condition: []
-action:
-  - choose:
-      - conditions:
-          - condition: numeric_state
-            entity_id: sensor.processor_temperature
-            below: '30.1'
-        sequence:
-          - service: input_number.set_value
-            target:
-              entity_id: input_number.cpu_fan_speed
-            data:
-              value: 0
-      - conditions:
-          - condition: numeric_state
-            entity_id: sensor.processor_temperature
-            above: '30.0'
-            below: '40.1'
-        sequence:
-          - service: input_number.set_value
-            target:
-              entity_id: input_number.cpu_fan_speed
-            data:
-              value: 10
-      - conditions:
-          - condition: numeric_state
-            entity_id: sensor.processor_temperature
-            above: '40.0'
-            below: '50.1'
-        sequence:
-          - service: input_number.set_value
-            target:
-              entity_id: input_number.cpu_fan_speed
-            data:
-              value: 50
-      - conditions:
-          - condition: numeric_state
-            entity_id: sensor.processor_temperature
-            above: '50.0'
-        sequence:
-          - service: input_number.set_value
-            target:
-              entity_id: input_number.cpu_fan_speed
-            data:
-              value: 100
-    default:
-      - service: input_number.set_value
-        target:
-          entity_id: input_number.cpu_fan_speed
-        data:
-          value: 55
-  - service: argon40.set_fan_speed
-    data:
-      speed: '{{ states(''input_number.cpu_fan_speed'') | int }}'
-mode: single
-```
-### Lovelace Fan_Speed:
-```
-type: grid
-cards:
-  - type: entities
-    entities:
-      - entity: sensor.processor_temperature
-      - entity: input_number.cpu_fan_speed
-columns: 1
-square: false
-```
-Lovelace Fan_Speed Temperature & Speed Graph:
-```
-type: grid
-cards:
-  - type: history-graph
-    entities:
-      - entity: sensor.processor_temperature
-      - entity: input_number.cpu_fan_speed
-    hours_to_show: 3
-    refresh_interval: 0
-    title: Processor sensor last 3 hour
-columns: 1
-square: false
 ```
