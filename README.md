@@ -57,7 +57,7 @@ ESP32 programerings kursus 2020
 ### SoftWare:
 * Raspberry Pi OS (32-bit), released: 2021-05-07
 * pieeprom-2021-04-29.bin
-* haos_rpi4-64-6.1 eller nyere
+* haos_rpi4-64-6.2 eller nyere
 * unxz
 ## Boot with Raspberry Pi OS (32-bit) from SD-Card:
 * disconnect the built-in M.2-SATA
@@ -88,9 +88,9 @@ sudo raspi-config
   * Home Assistant OS Release kan be found here:  
   https://github.com/home-assistant/operating-system/releases/
 ```
-wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.1.img.xz
+wget https://github.com/home-assistant/operating-system/releases/download/6.1/haos_rpi4-64-6.2.img.xz
 
-unxz haos_rpi4-64-6.1.img.xz
+unxz haos_rpi4-64-6.2.img.xz
 ```
 ## List block devices and dd - convert and copy a file:
 ```
@@ -98,7 +98,7 @@ lsblk
 ```
 * i expect M.2 SATA named **/dev/sda**
 ```
-sudo dd bs=4M if=haos_rpi4-64-6.1.img of=/dev/sda status=progress conv=fsync
+sudo dd bs=4M if=haos_rpi4-64-6.2.img of=/dev/sda status=progress conv=fsync
 ```
 ## Reboot:
 * If all went well it will boot Home Assistant fron SSD:
@@ -112,7 +112,8 @@ I what to enable i2c to bee able to controll fan speed i the Argon40 and react t
 * [ENABLE I2C VIA HOME ASSISTANT OPERATING SYSTEM TERMINAL](https://www.home-assistant.io/common-tasks/os#enable-i2c-via-home-assistant-operating-system-terminal)
 * [Argon40Tech/Argon-ONE-i2c-Codes](https://github.com/Argon40Tech/Argon-ONE-i2c-Codes)
 * [Misiu/argon40](https://github.com/Misiu/argon40)
-* * [HassOS I2C Configurator](https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167)
+  * [HassOS I2C Configurator](https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167)
+  * [Argon One Active Cooling Addon](https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598)
 
 You can enable i2c via this Raspberry Pi Console:
 
@@ -141,6 +142,19 @@ Save and exit vi with thise command:
 sync
 reboot
 ```
+## Power Button Support
+* Kilde: https://community.home-assistant.io/t/argon-one-active-cooling-addon/262598/2
+
+Power button double-tap support can be configured entirely through Home Assistant. There is no configuration for single-tap support.  
+### configuration.yaml
+```
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      4: Argon One Power Button
+```
+
+
 # Add on's you will nead on your system:
 ## File editor 
 * Configuration:
