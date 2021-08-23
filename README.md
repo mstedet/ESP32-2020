@@ -70,7 +70,17 @@ sudo apt-get install xz-utils
 ## Update RPi Firmware, Latest for now "pieeprom-2021-04-29.bin":
 ```
 sudo nano /etc/default/rpi-eeprom-update
-
+```
+Edit this line from:
+```
+FIRMWARE_RELEASE_STATUS="default"
+```
+to:
+```
+FIRMWARE_RELEASE_STATUS="stable"
+```
+Now update firmware with this command:
+```
 sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-04-29.bin
 ```
 ## Set boot options:
