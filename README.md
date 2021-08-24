@@ -339,10 +339,11 @@ packages:
 init_commands:  
   - ls -la  
 ```
-# Zigbee
+# Zigbee - CC2531
 * [IKEA Zigbee remotes - upgrading CC2531 firmware](https://www.youtube.com/watch?v=n8Qfyfkvt14&t=16s)
   * [Flashing CC2531 without CC Debugger](https://notenoughtech.com/home-automation/flashing-cc2531-without-cc-debugger/)
   * [jmichault/flash_cc2531](https://github.com/jmichault/flash_cc2531)
   * [Flash_cc2531](https://jmichault.github.io/flash_cc2531-dok/eo/)
   * [Flashing a CC2531 dongle using a Raspberry Pi](https://lemariva.com/blog/2019/08/zigbee-flashing-cc2531-using-raspberry-pi-without-cc-debugger)
   * [Koenkk/Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/default)
+* [Set up Zigbee with Home Assistant - ZHA Integration guide](https://www.youtube.com/watch?v=sezePzMmiHs)
