@@ -68,6 +68,11 @@ sudo apt update && sudo apt full-upgrade
 sudo apt-get install xz-utils
 ```
 ## Update RPi Firmware, Latest for now "pieeprom-2021-04-29.bin":
+You can check if you have the latest firmware with this command:
+```
+sudo rpi-eeprom-update
+```
+Now edit */etc/default/rpi-eeprom-update* to make sure you are running a stable version:
 ```
 sudo nano /etc/default/rpi-eeprom-update
 ```
